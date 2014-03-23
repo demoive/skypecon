@@ -1,0 +1,30 @@
+.sc {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    background-position: top center;
+    background-repeat: no-repeat;
+
+    width: unit(@width, px);
+    height: unit(@height, px);
+}
+
+.sc,
+.sc.sc-hover:hover {
+    /*-webkit-animation-duration*/
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-play-state: running;
+}
+
+.sc.sc-hover {
+    -webkit-animation-name: unset;
+}
+
+.sc.sc-still {
+    -webkit-animation: none;
+}
+
+.sc.sc-2x {
+    width: (2 * unit(@width, px));
+    height: (2 * unit(@height, px));
+}

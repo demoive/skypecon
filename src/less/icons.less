@@ -1,0 +1,56 @@
+// Dummy mixin to perform the loop
+.loop(@indx: 1) when (@indx < length(@icons)) {
+
+  @itr-key:            extract(@icons, @indx);
+  @itr-height-anim:    extract(@icons, @indx + 1);
+  @itr-height-anim-2x: (@itr-height-anim * 2);
+
+  @itr-animation-steps: (@itr-height-anim / @height);
+
+  .sc.sc-@{itr-key} {
+    background-image: ~"url(@{path}@{itr-key}@{path-suffix-frames-sprite}.png)";
+    -webkit-animation-duration: unit((@itr-animation-steps / @animation-duration-fps), s);
+
+    &.sc-slow { -webkit-animation-duration: unit((@itr-animation-steps / @animation-duration-fps-slow), s); }
+    &.sc-fast { -webkit-animation-duration: unit((@itr-animation-steps / @animation-duration-fps-fast), s); }
+  }
+
+  .sc.sc-2x.sc-@{itr-key} {
+    background-image: %(~"url(%s%d%s%s.png)", @path, @itr-key, @path-suffix-frames-sprite, @path-suffix-retina);
+  }
+
+  .sc.sc-still.sc-@{itr-key} {
+    background-image: %(~"url(%s%d.png)", @path, @itr-key);
+  }
+
+  .sc.sc-still.sc-2x.sc-@{itr-key} {
+    background-image: %(~"url(%s%d%s.png)", @path, @itr-key, @path-suffix-retina);
+  }
+  
+  .sc.sc-@{itr-key},
+  .sc.sc-@{itr-key}.sc-hover:hover {
+    -webkit-animation-name: ~'@{animation-name-prefix}@{itr-key}@{animation-name-suffix}';
+    -webkit-animation-timing-function: steps(@itr-animation-steps);
+  }
+
+  .sc.sc-@{itr-key}:not(.sc-2x),
+  .sc.sc-@{itr-key}:not(.sc-2x).sc-hover:hover {
+    -webkit-animation-name: ~'@{animation-name-prefix}@{itr-key}';
+  }
+
+  @-webkit-keyframes ~'@{animation-name-prefix}@{itr-key}@{animation-name-suffix}' {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 (-1 * unit(@itr-height-anim-2x, px)); }
+  }
+
+  @-webkit-keyframes ~'@{animation-name-prefix}@{itr-key}' {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 (-1 * unit(@itr-height-anim, px)); }
+  }
+  
+  // Repeat the loop
+  .loop(@indx + @list-interval);
+}
+
+// Initialize the loop call
+.loop();

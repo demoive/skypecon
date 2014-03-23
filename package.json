@@ -1,0 +1,13 @@
+{
+  "name": "Skypecon",
+  "version": "1.0.0",
+  "description": "Animated Skype icons",
+  "author": "Paulo Avila",
+  "devDependencies": {
+    "gulp": "^3.5.5",
+    "gulp-clean": "^0.2.4",
+    "gulp-rename": "^1.2.0",
+    "gulp-less": "^1.2.3",
+    "gulp-imagemin": "^0.1.5"
+  }
+}

@@ -1,0 +1,50 @@
+// Override certain styles when on a retina device.
+// Essentially this forces the .sc-2x class but adjusts the background-size to be 50%.
+
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dppx) {
+  .sc,
+  .sc.sc-2x {
+      width: unit(@width, px);
+      height: unit(@height, px);
+  }
+
+  // Dummy mixin to perform the loop
+  .loop(@indx: 1) when (@indx < length(@icons)) {
+
+    @itr-key:            extract(@icons, @indx);
+    @itr-height-anim-2x: (@itr-height-anim * 2);
+
+    @-webkit-keyframes ~'@{animation-name-prefix}@{itr-key}@{animation-name-suffix}' {
+        0% { background-position: 0 0; }
+        100% { background-position: 0 (-1 * unit(@itr-height-anim-2x, px)); }
+    }
+
+    /*
+    .sc.sc-@{itr-key} {
+      //background-size: 50%;
+      background-size: 20px;
+      background-image: ~"url(@{path}@{itr-key}@{path-suffix-frames-sprite}@{path-suffix-retina}.png)";
+    }
+    */
+
+    .sc.sc-still.sc-@{itr-key} {
+      //background-size: 50%;
+      background-size: unit(@width, px);
+      background-image: %(~"url(%s%d%s.png)", @path, @itr-key, @path-suffix-retina);
+    }
+  
+    .sc.sc-@{itr-key} {
+      //background-size: 50%;
+      background-size: unit(@width, px);
+      background-image: %(~"url(%s%d%s%s.png)", @path, @itr-key, @path-suffix-frames-sprite, @path-suffix-retina);
+    }
+  
+    // Repeat the loop
+    .loop(@indx + @list-interval);
+  }
+
+  // Initialize the loop call
+  .loop();
+}
