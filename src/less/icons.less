@@ -10,9 +10,16 @@
   .sc.sc-@{itr-key} {
     background-image: ~"url(@{path}@{itr-key}@{path-suffix-frames-sprite}.png)";
     -webkit-animation-duration: unit((@itr-animation-steps / @animation-duration-fps), s);
+    animation-duration: unit((@itr-animation-steps / @animation-duration-fps), s);
 
-    &.sc-slow { -webkit-animation-duration: unit((@itr-animation-steps / @animation-duration-fps-slow), s); }
-    &.sc-fast { -webkit-animation-duration: unit((@itr-animation-steps / @animation-duration-fps-fast), s); }
+    &.sc-slow {
+      -webkit-animation-duration: unit((@itr-animation-steps / @animation-duration-fps-slow), s);
+      animation-duration: unit((@itr-animation-steps / @animation-duration-fps-slow), s);
+    }
+    &.sc-fast {
+      -webkit-animation-duration: unit((@itr-animation-steps / @animation-duration-fps-fast), s);
+      animation-duration: unit((@itr-animation-steps / @animation-duration-fps-fast), s);
+    }
   }
 
   .sc.sc-2x.sc-@{itr-key} {
@@ -30,20 +37,32 @@
   .sc.sc-@{itr-key},
   .sc.sc-@{itr-key}.sc-hover:hover {
     -webkit-animation-name: ~'@{animation-name-prefix}@{itr-key}@{animation-name-suffix}';
+    animation-name: ~'@{animation-name-prefix}@{itr-key}@{animation-name-suffix}';
+
     -webkit-animation-timing-function: steps(@itr-animation-steps);
+    animation-timing-function: steps(@itr-animation-steps);
   }
 
   .sc.sc-@{itr-key}:not(.sc-2x),
   .sc.sc-@{itr-key}:not(.sc-2x).sc-hover:hover {
     -webkit-animation-name: ~'@{animation-name-prefix}@{itr-key}';
+    animation-name: ~'@{animation-name-prefix}@{itr-key}';
   }
 
   @-webkit-keyframes ~'@{animation-name-prefix}@{itr-key}@{animation-name-suffix}' {
     0% { background-position: 0 0; }
     100% { background-position: 0 (-1 * unit(@itr-height-anim-2x, px)); }
   }
+  @keyframes ~'@{animation-name-prefix}@{itr-key}@{animation-name-suffix}' {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 (-1 * unit(@itr-height-anim-2x, px)); }
+  }
 
   @-webkit-keyframes ~'@{animation-name-prefix}@{itr-key}' {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 (-1 * unit(@itr-height-anim, px)); }
+  }
+  @keyframes ~'@{animation-name-prefix}@{itr-key}' {
     0% { background-position: 0 0; }
     100% { background-position: 0 (-1 * unit(@itr-height-anim, px)); }
   }

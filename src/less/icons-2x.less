@@ -2,8 +2,13 @@
 // Essentially this forces the .sc-2x class but adjusts the background-size to be 50%.
 
 @media
-(-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 192dppx) {
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (   -moz-min-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
   .sc,
   .sc.sc-2x {
       width: unit(@width, px);
@@ -17,6 +22,10 @@
     @itr-height-anim-2x: (@itr-height-anim * 2);
 
     @-webkit-keyframes ~'@{animation-name-prefix}@{itr-key}@{animation-name-suffix}' {
+        0% { background-position: 0 0; }
+        100% { background-position: 0 (-1 * unit(@itr-height-anim-2x, px)); }
+    }
+    @keyframes ~'@{animation-name-prefix}@{itr-key}@{animation-name-suffix}' {
         0% { background-position: 0 0; }
         100% { background-position: 0 (-1 * unit(@itr-height-anim-2x, px)); }
     }
