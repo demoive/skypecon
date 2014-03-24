@@ -8,6 +8,10 @@
 
     <link rel="shortcut icon" href="assets/favicon-smile.png" type="image/png">
     <link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      .emoticons .btn { /*width: 180px;*/ text-align: left; }
+      input[name=emoticon] { display: none; }
+    </style>
   </head>
 
   <body>
@@ -21,9 +25,167 @@
       ga('send', 'pageview');
     </script>
 
+
+    <div class="well">
+      <div class="container">
+        <h1>Skypecon</h1>
+        <p class="lead">A framework for using Skype's animated emoticons.</p>
+
+        <div class="btn-group" data-toggle="buttons">
+          <label class="btn btn-default"><input type="radio" name="option-size" id="option-size-default"><code></code></label>
+          <label class="btn btn-default"><input type="radio" name="option-size" id="option-size-2x"><code>.sc-2x</code></label>
+        </div>
+
+        <div class="btn-group" data-toggle="buttons">
+          <label class="btn btn-default"><input type="radio" name="option-animate" id="option-animate-default"><code></code></label>
+          <label class="btn btn-default"><input type="radio" name="option-animate" id="option-animate-still"><code>.sc-still</code></label>
+          <label class="btn btn-default"><input type="radio" name="option-animate" id="option-animate-hover"><code>.sc-hover</code></label>
+        </div>
+
+        <div class="btn-group" data-toggle="buttons">
+          <label class="btn btn-default"><input type="radio" name="option-speed" id="option-speed-default"><code></code></label>
+          <label class="btn btn-default"><input type="radio" name="option-speed" id="option-speed-slow"><code>.sc-slow</code></label>
+          <label class="btn btn-default"><input type="radio" name="option-speed" id="option-speed-fast"><code>.sc-fast</code></label>
+        </div>
+
+        <h3>Code</h3>
+        <code id="code-snippet">
+          &lt;i class="sc sc-smile"&gt;&lt;/i&gt;
+        </code>
+        <!--
+        <iframe src="//ghbtns.com/github-btn.html?user=demoive&repo=skypecon&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+        <iframe src="//ghbtns.com/github-btn.html?user=demoive&repo=skypecon&type=fork&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="102px" height="20px"></iframe>
+        -->
+      </div>
+    </div>
+
     <div class="container">
-      <h1>Skypecon</h1>
-      <p class="lead">A framework for using Skype's animated emoticons.</p>
+      <h2>Available emoticons</h2>
+
+      <div class="row">
+        <div class="col-xs-6 col-md-3">
+          <div class="btn-group-vertical emoticons" data-toggle="buttons">
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-angel"><i class="sc sc-angel"></i> <code>.sc-angel</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-angry"><i class="sc sc-angry"></i> <code>.sc-angry</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-bandit"><i class="sc sc-bandit"></i> <code>.sc-bandit</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-bartlett"><i class="sc sc-bartlett"></i> <code>.sc-bartlett</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-beer"><i class="sc sc-beer"></i> <code>.sc-beer</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-bigsmile"><i class="sc sc-bigsmile"></i> <code>.sc-bigsmile</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-blushing"><i class="sc sc-blushing"></i> <code>.sc-blushing</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-bow"><i class="sc sc-bow"></i> <code>.sc-bow</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-brokenheart"><i class="sc sc-brokenheart"></i> <code>.sc-brokenheart</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-bug"><i class="sc sc-bug"></i> <code>.sc-bug</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-cake"><i class="sc sc-cake"></i> <code>.sc-cake</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-call"><i class="sc sc-call"></i> <code>.sc-call</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-cash"><i class="sc sc-cash"></i> <code>.sc-cash</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-clapping"><i class="sc sc-clapping"></i> <code>.sc-clapping</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-coffee"><i class="sc sc-coffee"></i> <code>.sc-coffee</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-cool"><i class="sc sc-cool"></i> <code>.sc-cool</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-crying"><i class="sc sc-crying"></i> <code>.sc-crying</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-dancing"><i class="sc sc-dancing"></i> <code>.sc-dancing</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-devil"><i class="sc sc-devil"></i> <code>.sc-devil</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-doh"><i class="sc sc-doh"></i> <code>.sc-doh</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-drink"><i class="sc sc-drink"></i> <code>.sc-drink</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-drunk"><i class="sc sc-drunk"></i> <code>.sc-drunk</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-dull"><i class="sc sc-dull"></i> <code>.sc-dull</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-emo"><i class="sc sc-emo"></i> <code>.sc-emo</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-envy"><i class="sc sc-envy"></i> <code>.sc-envy</code></label>
+          </div>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <div class="btn-group-vertical emoticons" data-toggle="buttons">
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-evilgrin"><i class="sc sc-evilgrin"></i> <code>.sc-evilgrin</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-facepalm"><i class="sc sc-facepalm"></i> <code>.sc-facepalm</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-finger"><i class="sc sc-finger"></i> <code>.sc-finger</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-fingerscrossed"><i class="sc sc-fingerscrossed"></i> <code>.sc-fingerscrossed</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-flower"><i class="sc sc-flower"></i> <code>.sc-flower</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-fubar"><i class="sc sc-fubar"></i> <code>.sc-fubar</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-giggle"><i class="sc sc-giggle"></i> <code>.sc-giggle</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-handshake"><i class="sc sc-handshake"></i> <code>.sc-handshake</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-happy"><i class="sc sc-happy"></i> <code>.sc-happy</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-headbang"><i class="sc sc-headbang"></i> <code>.sc-headbang</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-heart"><i class="sc sc-heart"></i> <code>.sc-heart</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-heidy"><i class="sc sc-heidy"></i> <code>.sc-heidy</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-hi"><i class="sc sc-hi"></i> <code>.sc-hi</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-highfive"><i class="sc sc-highfive"></i> <code>.sc-highfive</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-hollest"><i class="sc sc-hollest"></i> <code>.sc-hollest</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-hug"><i class="sc sc-hug"></i> <code>.sc-hug</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-inlove"><i class="sc sc-inlove"></i> <code>.sc-inlove</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-itwasntme"><i class="sc sc-itwasntme"></i> <code>.sc-itwasntme</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-kiss"><i class="sc sc-kiss"></i> <code>.sc-kiss</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-lalala"><i class="sc sc-lalala"></i> <code>.sc-lalala</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-lipssealed"><i class="sc sc-lipssealed"></i> <code>.sc-lipssealed</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-mail"><i class="sc sc-mail"></i> <code>.sc-mail</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-makeup"><i class="sc sc-makeup"></i> <code>.sc-makeup</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-malthe"><i class="sc sc-malthe"></i> <code>.sc-malthe</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-mmm"><i class="sc sc-mmm"></i> <code>.sc-mmm</code></label>
+          </div>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <div class="btn-group-vertical emoticons" data-toggle="buttons">
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-mooning"><i class="sc sc-mooning"></i> <code>.sc-mooning</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-movie"><i class="sc sc-movie"></i> <code>.sc-movie</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-muscle"><i class="sc sc-muscle"></i> <code>.sc-muscle</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-music"><i class="sc sc-music"></i> <code>.sc-music</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-nerd"><i class="sc sc-nerd"></i> <code>.sc-nerd</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-ninja"><i class="sc sc-ninja"></i> <code>.sc-ninja</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-no"><i class="sc sc-no"></i> <code>.sc-no</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-nod"><i class="sc sc-nod"></i> <code>.sc-nod</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-oliver"><i class="sc sc-oliver"></i> <code>.sc-oliver</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-party"><i class="sc sc-party"></i> <code>.sc-party</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-phone"><i class="sc sc-phone"></i> <code>.sc-phone</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-pizza"><i class="sc sc-pizza"></i> <code>.sc-pizza</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-poolparty"><i class="sc sc-poolparty"></i> <code>.sc-poolparty</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-priidu"><i class="sc sc-priidu"></i> <code>.sc-priidu</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-puking"><i class="sc sc-puking"></i> <code>.sc-puking</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-punch"><i class="sc sc-punch"></i> <code>.sc-punch</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-rain"><i class="sc sc-rain"></i> <code>.sc-rain</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-rock"><i class="sc sc-rock"></i> <code>.sc-rock</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-rofl"><i class="sc sc-rofl"></i> <code>.sc-rofl</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-sadsmile"><i class="sc sc-sadsmile"></i> <code>.sc-sadsmile</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-shake"><i class="sc sc-shake"></i> <code>.sc-shake</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-sleepy"><i class="sc sc-sleepy"></i> <code>.sc-sleepy</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-smile"><i class="sc sc-smile"></i> <code>.sc-smile</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-smirk"><i class="sc sc-smirk"></i> <code>.sc-smirk</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-smoking"><i class="sc sc-smoking"></i> <code>.sc-smoking</code></label>
+          </div>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <div class="btn-group-vertical emoticons" data-toggle="buttons">
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-speechless"><i class="sc sc-speechless"></i> <code>.sc-speechless</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-star"><i class="sc sc-star"></i> <code>.sc-star</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-sunshine"><i class="sc sc-sunshine"></i> <code>.sc-sunshine</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-surprised"><i class="sc sc-surprised"></i> <code>.sc-surprised</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-swear"><i class="sc sc-swear"></i> <code>.sc-swear</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-sweating"><i class="sc sc-sweating"></i> <code>.sc-sweating</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-talking"><i class="sc sc-talking"></i> <code>.sc-talking</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-thinking"><i class="sc sc-thinking"></i> <code>.sc-thinking</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-time"><i class="sc sc-time"></i> <code>.sc-time</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-tmi"><i class="sc sc-tmi"></i> <code>.sc-tmi</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-toivo"><i class="sc sc-toivo"></i> <code>.sc-toivo</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-tongueout"><i class="sc sc-tongueout"></i> <code>.sc-tongueout</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-tumbleweed"><i class="sc sc-tumbleweed"></i> <code>.sc-tumbleweed</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-wait"><i class="sc sc-wait"></i> <code>.sc-wait</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-waiting"><i class="sc sc-waiting"></i> <code>.sc-waiting</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-wfh"><i class="sc sc-wfh"></i> <code>.sc-wfh</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-whew"><i class="sc sc-whew"></i> <code>.sc-whew</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-wink"><i class="sc sc-wink"></i> <code>.sc-wink</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-wondering"><i class="sc sc-wondering"></i> <code>.sc-wondering</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-worried"><i class="sc sc-worried"></i> <code>.sc-worried</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-wtf"><i class="sc sc-wtf"></i> <code>.sc-wtf</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-yawning"><i class="sc sc-yawning"></i> <code>.sc-yawning</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-yes"><i class="sc sc-yes"></i> <code>.sc-yes</code></label>
+          </div>
+        </div>
+      </div>
+
+      <h2>Usage</h2>
+
+      <h2>Notice</h2>
+      <p>The actual <a href="https://support.skype.com/en/faq/FA12330/what-is-the-full-list-of-emoticons">Skype icons</a> are property of Skype, Inc. and should be used following their usage terms.</p>
     </div>
 
     <a href="https://github.com/demoive/skypecon"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
