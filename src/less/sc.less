@@ -1,45 +1,51 @@
+
 .sc {
-    display: inline-block;
-    position: relative;
-    text-align: center;
-    background-position: top center;
-    background-repeat: no-repeat;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  background-position: top center;
+  background-repeat: no-repeat;
 
-    width: unit(@width, px);
-    height: unit(@height, px);
-}
+  width: unit(@width, px);
+  height: unit(@height, px);
 
-.sc,
-.sc.sc-hover:hover {
+  // Double the dimensions for retina
+  &.sc-2x {
+    width: (2 * unit(@width, px));
+    height: (2 * unit(@height, px));
+  }
+
+  // Prevents animation for still mode
+  &.sc-still,
+  &.sc-still.sc-2x {
+    -webkit-animation: none;
+    animation: none;
+  }
+
+  // Prevents animation when in hover mode
+  &.sc-hover,
+  &.sc-hover.sc-2x {
+    -webkit-animation-name: unset;
+    animation-name: unset;
+  }
+
+  // Animates the icon (idle and hover)
+  &,
+  &.sc-hover:hover {
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
 
     -webkit-animation-play-state: running;
     animation-play-state: running;
-}
+  }
 
-.sc.sc-hover,
-.sc.sc-hover:not(.sc-2x) {
-    -webkit-animation-name: unset;
-    animation-name: unset;
-}
-
-.sc.sc-still {
-    -webkit-animation: none;
-    animation: none;
-}
-
-.sc.sc-still,
-.sc.sc-hover {
-    background-image: %(~"url(%s%s%s.png)", @path, @basename-stills-sprite, @basename-suffix-retina);
-}
-
-.sc.sc-still:not(.sc-2x),
-.sc.sc-hover:not(.sc-2x) {
+  // Set background sprite image for non-animation modes
+  &.sc-still,
+  &.sc-hover {
     background-image: %(~"url(%s%s.png)", @path, @basename-stills-sprite);
-}
 
-.sc.sc-2x {
-    width: (2 * unit(@width, px));
-    height: (2 * unit(@height, px));
+    &.sc-2x {
+      background-image: %(~"url(%s%s%s.png)", @path, @basename-stills-sprite, @basename-suffix-retina);
+    }
+  }
 }

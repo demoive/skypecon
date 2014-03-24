@@ -1,3 +1,4 @@
+
 // Dummy mixin to perform the loop
 .loop(@indx: 1) when (@indx < length(@icons)) {
 
@@ -7,6 +8,7 @@
 
   @itr-animation-steps: (@itr-height-anim / @height);
 
+  // Icon-specific durations for the different speeds
   .sc.sc-@{itr-key} {
     -webkit-animation-duration: unit((@itr-animation-steps / @animation-duration-fps), s);
     animation-duration: unit((@itr-animation-steps / @animation-duration-fps), s);
@@ -15,41 +17,43 @@
       -webkit-animation-duration: unit((@itr-animation-steps / @animation-duration-fps-slow), s);
       animation-duration: unit((@itr-animation-steps / @animation-duration-fps-slow), s);
     }
+
     &.sc-fast {
       -webkit-animation-duration: unit((@itr-animation-steps / @animation-duration-fps-fast), s);
       animation-duration: unit((@itr-animation-steps / @animation-duration-fps-fast), s);
     }
+
+    // Icon-specific animation information
+    &,
+    &.sc-hover:hover {
+      -webkit-animation-timing-function: steps(@itr-animation-steps);
+      animation-timing-function: steps(@itr-animation-steps);
+
+      -webkit-animation-name: ~'@{animation-name-prefix}@{itr-key}';
+      animation-name: ~'@{animation-name-prefix}@{itr-key}';
+
+      background-image: ~"url(@{path}@{itr-key}@{basename-suffix-frames-sprite}.png)";
+
+      &.sc-2x {
+        -webkit-animation-name: ~'@{animation-name-prefix}@{itr-key}@{animation-name-suffix}';
+        animation-name: ~'@{animation-name-prefix}@{itr-key}@{animation-name-suffix}';
+
+        background-image: ~"url(@{path}@{itr-key}@{basename-suffix-frames-sprite}@{basename-suffix-retina}.png)";
+      }
+    }
+
+    // Icon-specific sprite offset for non-animation mode
+    &.sc-still,
+    &.sc-hover {
+      background-position: (-1 * unit(((@indx - 1) * @width / 2), px)) 0;
+
+      &.sc-2x {
+      background-position: (-1 * unit(((@indx - 1) * @width), px)) 0;
+      }
+    }
   }
 
-  .sc.sc-still.sc-@{itr-key},
-  .sc.sc-hover.sc-@{itr-key} {
-    background-position: (-1 * unit(((@indx - 1) * @width / 2), px)) 0;
-  }
-
-  .sc.sc-still.sc-2x.sc-@{itr-key},
-  .sc.sc-hover.sc-2x.sc-@{itr-key} {
-    background-position: (-1 * unit(((@indx - 1) * @width), px)) 0;
-  }
-
-  .sc.sc-@{itr-key},
-  .sc.sc-@{itr-key}.sc-hover:hover {
-    -webkit-animation-name: ~'@{animation-name-prefix}@{itr-key}@{animation-name-suffix}';
-    animation-name: ~'@{animation-name-prefix}@{itr-key}@{animation-name-suffix}';
-
-    -webkit-animation-timing-function: steps(@itr-animation-steps);
-    animation-timing-function: steps(@itr-animation-steps);
-
-    background-image: ~"url(@{path}@{itr-key}@{basename-suffix-frames-sprite}@{basename-suffix-retina}.png)";
-  }
-
-  .sc.sc-@{itr-key}:not(.sc-2x),
-  .sc.sc-@{itr-key}:not(.sc-2x).sc-hover:hover {
-    -webkit-animation-name: ~'@{animation-name-prefix}@{itr-key}';
-    animation-name: ~'@{animation-name-prefix}@{itr-key}';
-
-    background-image: ~"url(@{path}@{itr-key}@{basename-suffix-frames-sprite}.png)";
-  }
-
+  // Icon-specific keyframe functions
   @-webkit-keyframes ~'@{animation-name-prefix}@{itr-key}@{animation-name-suffix}' {
     0% { background-position: 0 0; }
     100% { background-position: 0 (-1 * unit(@itr-height-anim-2x, px)); }
@@ -67,7 +71,7 @@
     0% { background-position: 0 0; }
     100% { background-position: 0 (-1 * unit(@itr-height-anim, px)); }
   }
-  
+
   // Repeat the loop
   .loop(@indx + @list-interval);
 }

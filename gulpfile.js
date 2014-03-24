@@ -25,6 +25,7 @@ gulp.task('less:dev', function() {
       .pipe(less({
         //yuicompress: true,
         //report: 'gzip'
+        dumpLineNumbers: 'comments'
       }))
       .pipe(gulp.dest('./dev/css'));
 });
@@ -71,6 +72,6 @@ gulp.task('clean:all', ['clean:dev', 'clean:dist'], function () {
 gulp.task('build:dev', ['less:dev', 'copy:dev']);
 gulp.task('build:dist', ['clean:dist', 'imagemin:dist', 'less:dist']);
 
-gulp.task('default', [''], function() {
-  // place code for your default task here
+gulp.task('default', ['build:dist'], function () {
+  // place [additional] code for your default task here
 });
