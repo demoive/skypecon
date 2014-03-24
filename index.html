@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Skypecon</title>
+    <title>Skypecon: Web-friendly Skype emoticons</title>
 
     <link rel="shortcut icon" href="assets/favicon-smile.png" type="image/png">
     <link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
@@ -26,48 +26,54 @@
       ga('send', 'pageview');
     </script>
 
-
-    <div class="well">
+    <div class="jumbotron">
       <div class="container">
         <h1>Skypecon <small>Web-friendly Skype emoticons</small></h1>
-        <p class="lead">Beautiful Skype icons available for the web using CSS for animations!</p>
+        <p>Beautiful Skype emoticons available for the web using CSS for animations and all that good stuff you like.</p>
 
-        <form class="form-inline">
-          <div class="form-group">
-            <label class="control-label">Animation</label>
-            <div class="btn-group options">
-              <label class="btn btn-default"><input type="radio" name="option-animate" id="option-animation-still"><code>.sc-still</code></label>
-              <label class="btn btn-default"><input type="radio" name="option-animate" id="option-animation-hover"><code>.sc-hover</code></label>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label class="control-label">Speed</label>
-            <div class="btn-group options">
-              <label class="btn btn-default"><input type="radio" name="option-speed" id="option-speed-slow"><code>.sc-slow</code></label>
-              <label class="btn btn-default"><input type="radio" name="option-speed" id="option-speed-fast"><code>.sc-fast</code></label>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label class="control-label">Size</label>
-            <div class="btn-group options">
-              <label class="btn btn-default"><input type="radio" name="option-size" id="option-size-2x"><code>.sc-2x</code></label>
-            </div>
-          </div>
-        </form>
-
+<div class="row well">
+  <div class="col-xs-12 col-sm-7 col-md-8">
         <h3>Preview</h3>
-        <div class="well">
-          <span id="snippet-preview"><i class="sc sc-smile sc-2x"></i></span>
-          <h4><code id="snippet-code">&lt;i class="sc sc-smile sc-2x"&gt;&lt;/i&gt;</code></h4>
-        </div>
+        <span id="snippet-preview"><i class="sc sc-smile sc-2x"></i></span>
+        <h4><code id="snippet-code">&lt;i class="sc sc-smile sc-2x"&gt;&lt;/i&gt;</code></h4>
         <!--
         <iframe src="//ghbtns.com/github-btn.html?user=demoive&repo=skypecon&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
         <iframe src="//ghbtns.com/github-btn.html?user=demoive&repo=skypecon&type=fork&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="102px" height="20px"></iframe>
         -->
+  </div>
+
+  <div class="col-xs-12 col-sm-5 col-md-4">
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label class="col-xs-3 control-label input-sm">Animation</label>
+            <div class="col-xs-9 btn-group options">
+              <label class="btn btn-default btn-sm"><input type="radio" name="option-animate" id="option-animation-still"><code>.sc-still</code></label>
+              <label class="btn btn-default btn-sm"><input type="radio" name="option-animate" id="option-animation-hover"><code>.sc-hover</code></label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-xs-3 control-label input-sm">Speed</label>
+            <div class="col-xs-9 btn-group options">
+              <label class="btn btn-default btn-sm"><input type="radio" name="option-speed" id="option-speed-slow"><code>.sc-slow</code></label>
+              <label class="btn btn-default btn-sm"><input type="radio" name="option-speed" id="option-speed-fast"><code>.sc-fast</code></label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-xs-3 control-label input-sm">Size</label>
+            <div class="col-xs-9 btn-group options">
+              <label class="btn btn-default btn-sm"><input type="radio" name="option-size" id="option-size-2x"><code>.sc-2x</code></label>
+            </div>
+          </div>
+        </form>
+  </div>
+</div>
+
       </div>
     </div>
+  </div>
+</div>
 
     <div class="container">
       <h2>Available emoticons</h2>
