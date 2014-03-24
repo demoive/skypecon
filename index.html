@@ -10,7 +10,8 @@
     <link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
     <style>
       .emoticons .btn { /*width: 180px;*/ text-align: left; }
-      input[name=emoticon] { display: none; }
+      input[name=emoticon],
+      input[name^=option-] { display: none; }
     </style>
   </head>
 
@@ -31,27 +32,32 @@
         <h1>Skypecon</h1>
         <p class="lead">A framework for using Skype's animated emoticons.</p>
 
-        <div class="btn-group" data-toggle="buttons">
+        <div class="btn-group options">
           <label class="btn btn-default"><input type="radio" name="option-size" id="option-size-default"><code></code></label>
           <label class="btn btn-default"><input type="radio" name="option-size" id="option-size-2x"><code>.sc-2x</code></label>
         </div>
 
-        <div class="btn-group" data-toggle="buttons">
-          <label class="btn btn-default"><input type="radio" name="option-animate" id="option-animate-default"><code></code></label>
-          <label class="btn btn-default"><input type="radio" name="option-animate" id="option-animate-still"><code>.sc-still</code></label>
-          <label class="btn btn-default"><input type="radio" name="option-animate" id="option-animate-hover"><code>.sc-hover</code></label>
+        <div class="btn-group options">
+          <label class="btn btn-default"><input type="radio" name="option-animate" id="option-animation-default"><code></code></label>
+          <label class="btn btn-default"><input type="radio" name="option-animate" id="option-animation-still"><code>.sc-still</code></label>
+          <label class="btn btn-default"><input type="radio" name="option-animate" id="option-animation-hover"><code>.sc-hover</code></label>
         </div>
 
-        <div class="btn-group" data-toggle="buttons">
+        <div class="btn-group options">
           <label class="btn btn-default"><input type="radio" name="option-speed" id="option-speed-default"><code></code></label>
           <label class="btn btn-default"><input type="radio" name="option-speed" id="option-speed-slow"><code>.sc-slow</code></label>
           <label class="btn btn-default"><input type="radio" name="option-speed" id="option-speed-fast"><code>.sc-fast</code></label>
         </div>
 
         <h3>Code</h3>
-        <code id="code-snippet">
-          &lt;i class="sc sc-smile"&gt;&lt;/i&gt;
-        </code>
+        <div class="well">
+          <span id="snippet-preview">
+            <i class="sc sc-smile sc-2x"></i>
+          </span>
+          <code id="snippet-code">
+            &lt;i class="sc sc-smile sc-2x"&gt;&lt;/i&gt;
+          </code>
+        </div>
         <!--
         <iframe src="//ghbtns.com/github-btn.html?user=demoive&repo=skypecon&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
         <iframe src="//ghbtns.com/github-btn.html?user=demoive&repo=skypecon&type=fork&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="102px" height="20px"></iframe>
@@ -64,7 +70,7 @@
 
       <div class="row">
         <div class="col-xs-6 col-md-3">
-          <div class="btn-group-vertical emoticons" data-toggle="buttons">
+          <div class="btn-group-vertical emoticons">
             <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-angel"><i class="sc sc-angel"></i> <code>.sc-angel</code></label>
             <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-angry"><i class="sc sc-angry"></i> <code>.sc-angry</code></label>
             <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-bandit"><i class="sc sc-bandit"></i> <code>.sc-bandit</code></label>
@@ -94,7 +100,7 @@
         </div>
 
         <div class="col-xs-6 col-md-3">
-          <div class="btn-group-vertical emoticons" data-toggle="buttons">
+          <div class="btn-group-vertical emoticons">
             <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-evilgrin"><i class="sc sc-evilgrin"></i> <code>.sc-evilgrin</code></label>
             <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-facepalm"><i class="sc sc-facepalm"></i> <code>.sc-facepalm</code></label>
             <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-finger"><i class="sc sc-finger"></i> <code>.sc-finger</code></label>
@@ -124,7 +130,7 @@
         </div>
 
         <div class="col-xs-6 col-md-3">
-          <div class="btn-group-vertical emoticons" data-toggle="buttons">
+          <div class="btn-group-vertical emoticons">
             <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-mooning"><i class="sc sc-mooning"></i> <code>.sc-mooning</code></label>
             <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-movie"><i class="sc sc-movie"></i> <code>.sc-movie</code></label>
             <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-muscle"><i class="sc sc-muscle"></i> <code>.sc-muscle</code></label>
@@ -154,7 +160,7 @@
         </div>
 
         <div class="col-xs-6 col-md-3">
-          <div class="btn-group-vertical emoticons" data-toggle="buttons">
+          <div class="btn-group-vertical emoticons">
             <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-speechless"><i class="sc sc-speechless"></i> <code>.sc-speechless</code></label>
             <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-star"><i class="sc sc-star"></i> <code>.sc-star</code></label>
             <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-sunshine"><i class="sc sc-sunshine"></i> <code>.sc-sunshine</code></label>
@@ -192,5 +198,63 @@
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+    <script>
+      $(function () {
+        var $snippetCode = $('#snippet-code'),
+          $snippetPreview = $('#snippet-preview');
+          window.snippetOptions = {
+            emoticon: 'smile',
+            speed: '',
+            animation: '',
+            size: '2x'
+          };
+
+        updateSnippet();
+
+        // Update initial interface states
+        $('#emoticon-smile')/*prop("checked", true).*/.parent().addClass("active");
+        $('#option-size-2x')/*prop("checked", true).*/.parent().addClass("active");
+
+        // User interaction to choose an emoticon
+        $('.emoticons').on('click', '.btn', function () {
+          $('.emoticons .btn.active').removeClass('active');
+          $(this).addClass('active');
+
+          snippetOptions.emoticon = $(this).children('input').prop('id').split('emoticon-')[1];
+          updateSnippet();
+
+          return false;
+        });
+
+        // User interaction to choose the options
+        $('.options').on('click', '.btn', function () {
+          var tokens = $(this).children('input').prop('id').split('-');
+            key = tokens[1],
+            value = tokens[2];
+
+          $(this).siblings().removeClass('active');
+          $(this).toggleClass('active');
+
+          snippetOptions[key] = $(this).hasClass('active') ? value : '';
+          updateSnippet();
+
+          return false;
+        });
+
+
+        function updateSnippet() {
+          var code = '<i class="sc' +
+            ' sc-' + snippetOptions.emoticon +
+            (!snippetOptions.animation ? '' : ' sc-' + snippetOptions.animation) +
+            (!snippetOptions.speed     ? '' : ' sc-' + snippetOptions.speed) +
+            (!snippetOptions.size      ? '' : ' sc-' + snippetOptions.size) +
+            '"></i>';
+
+          $snippetPreview.html(code);
+          $snippetCode.text(code);
+        }
+      });
+    </script>
   </body>
 </html>
