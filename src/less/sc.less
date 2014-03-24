@@ -29,6 +29,16 @@
     animation: none;
 }
 
+.sc.sc-still,
+.sc.sc-hover {
+    background-image: %(~"url(%s%s%s.png)", @path, @basename-stills-sprite, @basename-suffix-retina);
+}
+
+.sc.sc-still:not(.sc-2x),
+.sc.sc-hover:not(.sc-2x) {
+    background-image: %(~"url(%s%s.png)", @path, @basename-stills-sprite);
+}
+
 .sc.sc-2x {
     width: (2 * unit(@width, px));
     height: (2 * unit(@height, px));

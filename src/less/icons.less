@@ -8,7 +8,6 @@
   @itr-animation-steps: (@itr-height-anim / @height);
 
   .sc.sc-@{itr-key} {
-    background-image: ~"url(@{path}@{itr-key}@{basename-suffix-frames-sprite}.png)";
     -webkit-animation-duration: unit((@itr-animation-steps / @animation-duration-fps), s);
     animation-duration: unit((@itr-animation-steps / @animation-duration-fps), s);
 
@@ -22,18 +21,16 @@
     }
   }
 
-  .sc.sc-2x.sc-@{itr-key} {
-    background-image: %(~"url(%s%d%s%s.png)", @path, @itr-key, @basename-suffix-frames-sprite, @basename-suffix-retina);
+  .sc.sc-still.sc-@{itr-key},
+  .sc.sc-hover.sc-@{itr-key} {
+    background-position: (-1 * unit(((@indx - 1) * @width / 2), px)) 0;
   }
 
-  .sc.sc-still.sc-@{itr-key} {
-    background-image: %(~"url(%s%d.png)", @path, @itr-key);
+  .sc.sc-still.sc-2x.sc-@{itr-key},
+  .sc.sc-hover.sc-2x.sc-@{itr-key} {
+    background-position: (-1 * unit(((@indx - 1) * @width), px)) 0;
   }
 
-  .sc.sc-still.sc-2x.sc-@{itr-key} {
-    background-image: %(~"url(%s%d%s.png)", @path, @itr-key, @basename-suffix-retina);
-  }
-  
   .sc.sc-@{itr-key},
   .sc.sc-@{itr-key}.sc-hover:hover {
     -webkit-animation-name: ~'@{animation-name-prefix}@{itr-key}@{animation-name-suffix}';
@@ -41,12 +38,16 @@
 
     -webkit-animation-timing-function: steps(@itr-animation-steps);
     animation-timing-function: steps(@itr-animation-steps);
+
+    background-image: ~"url(@{path}@{itr-key}@{basename-suffix-frames-sprite}@{basename-suffix-retina}.png)";
   }
 
   .sc.sc-@{itr-key}:not(.sc-2x),
   .sc.sc-@{itr-key}:not(.sc-2x).sc-hover:hover {
     -webkit-animation-name: ~'@{animation-name-prefix}@{itr-key}';
     animation-name: ~'@{animation-name-prefix}@{itr-key}';
+
+    background-image: ~"url(@{path}@{itr-key}@{basename-suffix-frames-sprite}.png)";
   }
 
   @-webkit-keyframes ~'@{animation-name-prefix}@{itr-key}@{animation-name-suffix}' {
