@@ -29,34 +29,38 @@
 
     <div class="well">
       <div class="container">
-        <h1>Skypecon</h1>
-        <p class="lead">A framework for using Skype's animated emoticons.</p>
+        <h1>Skypecon <small>Web-friendly Skype emoticons</small></h1>
+        <p class="lead">Beautiful Skype icons available for the web using CSS for animations!</p>
 
-        <div class="btn-group options">
-          <label class="btn btn-default"><input type="radio" name="option-size" id="option-size-default"><code></code></label>
-          <label class="btn btn-default"><input type="radio" name="option-size" id="option-size-2x"><code>.sc-2x</code></label>
-        </div>
+        <form class="form-inline">
+          <div class="form-group">
+            <label class="control-label">Animation</label>
+            <div class="btn-group options">
+              <label class="btn btn-default"><input type="radio" name="option-animate" id="option-animation-still"><code>.sc-still</code></label>
+              <label class="btn btn-default"><input type="radio" name="option-animate" id="option-animation-hover"><code>.sc-hover</code></label>
+            </div>
+          </div>
 
-        <div class="btn-group options">
-          <label class="btn btn-default"><input type="radio" name="option-animate" id="option-animation-default"><code></code></label>
-          <label class="btn btn-default"><input type="radio" name="option-animate" id="option-animation-still"><code>.sc-still</code></label>
-          <label class="btn btn-default"><input type="radio" name="option-animate" id="option-animation-hover"><code>.sc-hover</code></label>
-        </div>
+          <div class="form-group">
+            <label class="control-label">Speed</label>
+            <div class="btn-group options">
+              <label class="btn btn-default"><input type="radio" name="option-speed" id="option-speed-slow"><code>.sc-slow</code></label>
+              <label class="btn btn-default"><input type="radio" name="option-speed" id="option-speed-fast"><code>.sc-fast</code></label>
+            </div>
+          </div>
 
-        <div class="btn-group options">
-          <label class="btn btn-default"><input type="radio" name="option-speed" id="option-speed-default"><code></code></label>
-          <label class="btn btn-default"><input type="radio" name="option-speed" id="option-speed-slow"><code>.sc-slow</code></label>
-          <label class="btn btn-default"><input type="radio" name="option-speed" id="option-speed-fast"><code>.sc-fast</code></label>
-        </div>
+          <div class="form-group">
+            <label class="control-label">Size</label>
+            <div class="btn-group options">
+              <label class="btn btn-default"><input type="radio" name="option-size" id="option-size-2x"><code>.sc-2x</code></label>
+            </div>
+          </div>
+        </form>
 
-        <h3>Code</h3>
+        <h3>Preview</h3>
         <div class="well">
-          <span id="snippet-preview">
-            <i class="sc sc-smile sc-2x"></i>
-          </span>
-          <code id="snippet-code">
-            &lt;i class="sc sc-smile sc-2x"&gt;&lt;/i&gt;
-          </code>
+          <span id="snippet-preview"><i class="sc sc-smile sc-2x"></i></span>
+          <h4><code id="snippet-code">&lt;i class="sc sc-smile sc-2x"&gt;&lt;/i&gt;</code></h4>
         </div>
         <!--
         <iframe src="//ghbtns.com/github-btn.html?user=demoive&repo=skypecon&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
