@@ -34,20 +34,20 @@ only screen and (                min-resolution: 2dppx) {
     .sc.sc-@{itr-key} {
       //background-size: 50%;
       background-size: 20px;
-      background-image: ~"url(@{path}@{itr-key}@{path-suffix-frames-sprite}@{path-suffix-retina}.png)";
+      background-image: ~"url(@{path}@{itr-key}@{basename-suffix-frames-sprite}@{basename-suffix-retina}.png)";
     }
     */
 
     .sc.sc-still.sc-@{itr-key} {
       //background-size: 50%;
       background-size: unit(@width, px);
-      background-image: %(~"url(%s%d%s.png)", @path, @itr-key, @path-suffix-retina);
+      background-image: %(~"url(%s%d%s.png)", @path, @itr-key, @basename-suffix-retina);
     }
   
     .sc.sc-@{itr-key} {
       //background-size: 50%;
       background-size: unit(@width, px);
-      background-image: %(~"url(%s%d%s%s.png)", @path, @itr-key, @path-suffix-frames-sprite, @path-suffix-retina);
+      background-image: %(~"url(%s%d%s%s.png)", @path, @itr-key, @basename-suffix-frames-sprite, @basename-suffix-retina);
     }
   
     // Repeat the loop

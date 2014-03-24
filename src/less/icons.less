@@ -8,7 +8,7 @@
   @itr-animation-steps: (@itr-height-anim / @height);
 
   .sc.sc-@{itr-key} {
-    background-image: ~"url(@{path}@{itr-key}@{path-suffix-frames-sprite}.png)";
+    background-image: ~"url(@{path}@{itr-key}@{basename-suffix-frames-sprite}.png)";
     -webkit-animation-duration: unit((@itr-animation-steps / @animation-duration-fps), s);
     animation-duration: unit((@itr-animation-steps / @animation-duration-fps), s);
 
@@ -23,7 +23,7 @@
   }
 
   .sc.sc-2x.sc-@{itr-key} {
-    background-image: %(~"url(%s%d%s%s.png)", @path, @itr-key, @path-suffix-frames-sprite, @path-suffix-retina);
+    background-image: %(~"url(%s%d%s%s.png)", @path, @itr-key, @basename-suffix-frames-sprite, @basename-suffix-retina);
   }
 
   .sc.sc-still.sc-@{itr-key} {
@@ -31,7 +31,7 @@
   }
 
   .sc.sc-still.sc-2x.sc-@{itr-key} {
-    background-image: %(~"url(%s%d%s.png)", @path, @itr-key, @path-suffix-retina);
+    background-image: %(~"url(%s%d%s.png)", @path, @itr-key, @basename-suffix-retina);
   }
   
   .sc.sc-@{itr-key},
