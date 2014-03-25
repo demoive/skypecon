@@ -9,10 +9,19 @@ only screen and (     -o-min-device-pixel-ratio: 2/1),
 only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) { 
+
   .sc,
   .sc.sc-2x {
-      width: unit(@width, px);
-      height: unit(@height, px);
+    width: unit(@width, px);
+    height: unit(@height, px);
+
+    //background-size: 50%;
+    background-size: unit(@width, px);
+  }
+
+  .sc.sc-still,
+  .sc.sc-hover {
+    background-image: %(~"url(%s%s%s.png)", @path, @basename-stills-sprite, @basename-suffix-retina);
   }
 
   // Dummy mixin to perform the loop
@@ -41,12 +50,11 @@ only screen and (                min-resolution: 2dppx) {
     .sc.sc-still.sc-@{itr-key} {
       //background-size: 50%;
       background-size: unit(@width, px);
-      background-image: %(~"url(%s%d%s.png)", @path, @itr-key, @basename-suffix-retina);
+
+      background-position: (-1 * unit(((@indx - 1) * @width), px)) 0;
     }
   
     .sc.sc-@{itr-key} {
-      //background-size: 50%;
-      background-size: unit(@width, px);
       background-image: %(~"url(%s%d%s%s.png)", @path, @itr-key, @basename-suffix-frames-sprite, @basename-suffix-retina);
     }
   
