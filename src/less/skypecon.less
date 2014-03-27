@@ -1,5 +1,15 @@
 
 @import "sc-variables.less";
 @import "sc-icons.less";
+
+//I would prefer this be in the sc.less file but for now it needs to be before sc-icons@2x.less
+.sc {
+  // Double the dimensions for retina.
+  &.sc-2x {
+    width: (@retina-factor * unit(@width, px));
+    height: (@retina-factor * unit(@height, px));
+  }
+}
+
 @import "sc-icons@2x.less";
 @import "sc.less";

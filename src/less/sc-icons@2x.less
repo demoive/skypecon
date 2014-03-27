@@ -1,15 +1,4 @@
 
-//I would prefer this be in the sc.less file but for now it needs to be before the stuff below...
-.sc {
-  // Double the dimensions for retina.
-  &.sc-2x {
-    width: (@retina-factor * unit(@width, px));
-    height: (@retina-factor * unit(@height, px));
-  }
-}
-
-
-
 // Override certain styles when on a retina device.
 // Essentially this forces the .sc-2x class but adjusts the background-size to be 50%.
 @media
