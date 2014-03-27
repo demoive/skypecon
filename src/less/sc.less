@@ -38,14 +38,4 @@
     -webkit-animation-play-state: running;
     animation-play-state: running;
   }
-
-  // Set background sprite image for non-animation modes.
-  &.sc-still,
-  &.sc-hover {
-    background-image: %(~"url(%s%s.png)", @path, @basename-stills-sprite);
-
-    &.sc-2x {
-      background-image: %(~"url(%s%s%s.png)", @path, @basename-stills-sprite, @basename-retina);
-    }
-  }
 }
