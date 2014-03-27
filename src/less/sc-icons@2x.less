@@ -1,14 +1,13 @@
 // Override certain styles when on a retina device.
 // Essentially this forces the .sc-2x class but adjusts the background-size to be 50%.
-
 @media
-only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (   min--moz-device-pixel-ratio: 2),
-only screen and (   -moz-min-device-pixel-ratio: 2),
-only screen and (     -o-min-device-pixel-ratio: 2/1),
-only screen and (        min-device-pixel-ratio: 2),
+only screen and (-webkit-min-device-pixel-ratio: @retina-factor),
+only screen and (   min--moz-device-pixel-ratio: @retina-factor),
+only screen and (   -moz-min-device-pixel-ratio: @retina-factor),
+only screen and (     -o-min-device-pixel-ratio: @retina-factor/1),
+only screen and (        min-device-pixel-ratio: @retina-factor),
 only screen and (                min-resolution: 192dpi),
-only screen and (                min-resolution: 2dppx) { 
+only screen and (                min-resolution: ~"@{retina-factor}dppx") {
 
   .sc,
   .sc.sc-2x {

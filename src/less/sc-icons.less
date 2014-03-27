@@ -4,7 +4,7 @@
 
   @itr-key:            extract(@icons, @indx);
   @itr-height-anim:    extract(@icons, @indx + 1);
-  @itr-height-anim-2x: (@itr-height-anim * 2);
+  @itr-height-anim-2x: (@itr-height-anim * @retina-factor);
 
   @itr-animation-steps: (@itr-height-anim / @height);
 
@@ -45,7 +45,7 @@
     // Icon-specific sprite offset for non-animation mode.
     &.sc-still,
     &.sc-hover {
-      background-position: (-1 * unit(((@indx - 1) * @width / 2), px)) 0;
+      background-position: (-1 * unit(((@indx - 1) * @width / @retina-factor), px)) 0;
 
       &.sc-2x {
       background-position: (-1 * unit(((@indx - 1) * @width), px)) 0;
