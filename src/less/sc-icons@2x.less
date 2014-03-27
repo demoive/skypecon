@@ -16,17 +16,23 @@ only screen and (                min-resolution: ~"@{retina-factor}dppx") {
     @itr-key:            extract(@icons, @indx);
     @itr-height-anim-2x: (@itr-height-anim * @retina-factor);
 
+    // Icon-specific animation information.
     .sc.sc-@{itr-key} {
+      // Force the retina version on non-2x classes
       &,
       &.sc-hover:hover {
         background-image: ~"url(@{path}@{itr-key}@{basename-suffix-frames-sprite}@{basename-retina}.png)";
       }
 
-      // Icon-specific animation information.
+      // Force the non-2x animation (keyframes) on the retina verion.
+      // Effectively adjusts for the proper background position offset (half)
+      // based on the halved background-size for retina screens.
       &,
       &.sc-hover:hover {
-        -webkit-animation-name: ~'@{animation-name-prefix}@{itr-key}@{animation-name-retina}';
-        animation-name: ~'@{animation-name-prefix}@{itr-key}@{animation-name-retina}';
+        &.sc-2x {
+          -webkit-animation-name: ~'@{animation-name-prefix}@{itr-key}';
+          animation-name: ~'@{animation-name-prefix}@{itr-key}';
+        }
       }
 
       // Force the icon-specific sprite offset for non-animation modes to use the non-retina version.
@@ -36,16 +42,6 @@ only screen and (                min-resolution: ~"@{retina-factor}dppx") {
           background-position: (-1 * unit(((@indx - 1) * @width / @retina-factor), px)) 0;
         }
       }
-    }
-
-    // Redefine the non-retina animation functions to be like the retina ones.
-    @-webkit-keyframes ~'@{animation-name-prefix}@{itr-key}' {
-        0% { background-position: 0 0; }
-        100% { background-position: 0 (-1 * unit(@itr-height-anim-2x, px)); }
-    }
-    @keyframes ~'@{animation-name-prefix}@{itr-key}' {
-        0% { background-position: 0 0; }
-        100% { background-position: 0 (-1 * unit(@itr-height-anim-2x, px)); }
     }
   
     // Repeat the loop.
