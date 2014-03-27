@@ -1,13 +1,19 @@
 {
-  "name": "Skypecon",
-  "version": "0.5.3",
-  "description": "Animated Skype icons",
-  "author": "Paulo Avila",
+  "name": "skypecon",
+  "version": "1.4.6",
+  "description": "Web-friendly Skype emoticons",
+  "homepage": "http://demoive.github.io/skypecon",
+  "author": "Paulo Ávila",
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/demoive/skypecon/blob/master/LICENSE"
+  },
   "devDependencies": {
     "gulp": "^3.5.5",
     "gulp-clean": "^0.2.4",
     "gulp-rename": "^1.2.0",
     "gulp-less": "^1.2.3",
-    "gulp-imagemin": "^0.1.5"
+    "gulp-imagemin": "^0.1.5",
+    "gulp-header": "^1.0.2"
   }
 }

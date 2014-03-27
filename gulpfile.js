@@ -1,18 +1,26 @@
 var gulp = require('gulp');
 
-// Use this to access properties of the package
-//var pkg = require('./package.json');
+var pkg = require('./package.json');
 
 var clean = require('gulp-clean');
 var rename = require('gulp-rename');
 var less = require('gulp-less');
 var imagemin = require('gulp-imagemin');
+var header = require('gulp-header');
 
-gulp.task('watch:less', function() {
+var banner = '/*!\n' +
+             ' * Skypecon v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
+             ' * Copyright 2014 <%= pkg.author %>\n' +
+             ' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n' +
+             ' */\n\n';
+
+
+gulp.task('watch:less', function () {
     gulp.watch('./src/less/*.less', ['less:dev']);
 });
 
-gulp.task('copy:dev', function() {
+
+gulp.task('copy:dev', function () {
   gulp.src('./src/*.html')
       .pipe(gulp.dest('./dev'));
 
@@ -20,39 +28,47 @@ gulp.task('copy:dev', function() {
       .pipe(gulp.dest('./dev/img'));
 });
 
-gulp.task('less:dev', function() {
-  gulp.src('./src/less/skypecon.less')
+gulp.task('copy:dist', function () {
+  gulp.src('./src/skype-icons/**/*')
+      .pipe(gulp.dest('./dist/img'));
+});
+// Error occuring for now...
+// gulp.task('imagemin:dist', function() {
+//   gulp.src('src/skype-icons/**/*')
+//       .pipe(imagemin())
+//       .pipe(gulp.dest('dist/img'));
+// });
+
+
+gulp.task('less:dev', function () {
+  gulp.src('./src/less/' + pkg.name + '.less')
       .pipe(less({
         //yuicompress: true,
-        //report: 'gzip'
         dumpLineNumbers: 'comments'
       }))
       .pipe(gulp.dest('./dev/css'));
 });
 
-gulp.task('less:dist', function() {
-  gulp.src('./src/less/skypecon.less')
+gulp.task('less:dist', function () {
+  gulp.src('./src/less/' + pkg.name + '.less')
+      .pipe(less())
+      .pipe(header(banner, {pkg : pkg}))
+      .pipe(gulp.dest('./dist/css'));
+});
+
+gulp.task('less:minify', function () {
+  gulp.src('./src/less/' + pkg.name + '.less')
       .pipe(less({
+        //report: 'gzip',
         compress: true
       }))
       .pipe(rename({
         suffix: ".min"
       }))
+      .pipe(header(banner, {pkg : pkg}))
       .pipe(gulp.dest('./dist/css'));
 });
 
-gulp.task('imagemin:dist', function() {
-  gulp.src('src/skype-icons/**/*')
-      .pipe(imagemin())
-      .pipe(gulp.dest('dist/img'));
-});
-
-/*
-gulp.tasks('copy', function() {
-  gulp.src('./src/**')
-      .pipe(gulp.dest('./dist/'));
-});
-*/
 
 gulp.task('clean:dev', function () {
   gulp.src('./dev', {read: false})
@@ -70,7 +86,7 @@ gulp.task('clean:all', ['clean:dev', 'clean:dist'], function () {
 });
 
 gulp.task('build:dev', ['less:dev', 'copy:dev']);
-gulp.task('build:dist', ['clean:dist', 'imagemin:dist', 'less:dist']);
+gulp.task('build:dist', ['clean:dist', 'copy:dist'/*'imagemin:dist'*/, 'less:dist', 'less:minify']);
 
 gulp.task('default', ['build:dist'], function () {
   // place [additional] code for your default task here
