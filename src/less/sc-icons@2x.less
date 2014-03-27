@@ -1,3 +1,15 @@
+
+//I would prefer this be in the sc.less file but for now it needs to be before the stuff below...
+.sc {
+  // Double the dimensions for retina.
+  &.sc-2x {
+    width: (@retina-factor * unit(@width, px));
+    height: (@retina-factor * unit(@height, px));
+  }
+}
+
+
+
 // Override certain styles when on a retina device.
 // Essentially this forces the .sc-2x class but adjusts the background-size to be 50%.
 @media
@@ -9,58 +21,70 @@ only screen and (        min-device-pixel-ratio: @retina-factor),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: ~"@{retina-factor}dppx") {
 
-  .sc,
-  .sc.sc-2x {
-    width: unit(@width, px);
-    height: unit(@height, px);
-
-    //background-size: 50%;
-    background-size: unit(@width, px);
-  }
-
-  .sc.sc-still,
-  .sc.sc-hover {
-    background-image: %(~"url(%s%s%s.png)", @path, @basename-stills-sprite, @basename-suffix-retina);
-  }
-
-  // Dummy mixin to perform the loop
+  // Dummy mixin to perform the loop for icon-specific styles.
   .loop(@indx: 1) when (@indx < length(@icons)) {
 
     @itr-key:            extract(@icons, @indx);
-    @itr-height-anim-2x: (@itr-height-anim * 2);
+    @itr-height-anim-2x: (@itr-height-anim * @retina-factor);
 
-    @-webkit-keyframes ~'@{animation-name-prefix}@{itr-key}@{animation-name-suffix}' {
+    .sc.sc-@{itr-key} {
+      &,
+      &.sc-hover:hover {
+        background-image: ~"url(@{path}@{itr-key}@{basename-suffix-frames-sprite}@{basename-retina}.png)";
+      }
+
+      // Icon-specific animation information.
+      &,
+      &.sc-hover:hover {
+        -webkit-animation-name: ~'@{animation-name-prefix}@{itr-key}@{animation-name-retina}';
+        animation-name: ~'@{animation-name-prefix}@{itr-key}@{animation-name-retina}';
+      }
+
+      // Force the icon-specific sprite offset for non-animation modes to use the non-retina version.
+      &.sc-still,
+      &.sc-hover {
+        &.sc-2x {
+          background-position: (-1 * unit(((@indx - 1) * @width / @retina-factor), px)) 0;
+        }
+      }
+    }
+
+    // Redefine the non-retina animation functions to be like the retina ones.
+    @-webkit-keyframes ~'@{animation-name-prefix}@{itr-key}' {
         0% { background-position: 0 0; }
         100% { background-position: 0 (-1 * unit(@itr-height-anim-2x, px)); }
     }
-    @keyframes ~'@{animation-name-prefix}@{itr-key}@{animation-name-suffix}' {
+    @keyframes ~'@{animation-name-prefix}@{itr-key}' {
         0% { background-position: 0 0; }
         100% { background-position: 0 (-1 * unit(@itr-height-anim-2x, px)); }
     }
-
-    /*
-    .sc.sc-@{itr-key} {
-      //background-size: 50%;
-      background-size: 20px;
-      background-image: ~"url(@{path}@{itr-key}@{basename-suffix-frames-sprite}@{basename-suffix-retina}.png)";
-    }
-    */
-
-    .sc.sc-still.sc-@{itr-key} {
-      //background-size: 50%;
-      background-size: unit(@width, px);
-
-      background-position: (-1 * unit(((@indx - 1) * @width), px)) 0;
-    }
   
-    .sc.sc-@{itr-key} {
-      background-image: %(~"url(%s%d%s%s.png)", @path, @itr-key, @basename-suffix-frames-sprite, @basename-suffix-retina);
-    }
-  
-    // Repeat the loop
+    // Repeat the loop.
     .loop(@indx + @list-interval);
   }
 
-  // Initialize the loop call
+  // Initialize the loop call.
   .loop();
+
+  // Shrink the background size by 50%
+  .sc {
+    &,
+    &.sc-hover:hover {
+      //background-size: 50%;
+      background-size: unit(@width, px);
+    }
+
+    // Force the dimensions of any manually set 2x icon to be scaled down (for higher resolution).
+    &.sc-2x {
+      width: unit(@width, px);
+      height: unit(@height, px);
+    }
+
+    // Force the background sprite image for the non-animation modes to the retina version.
+    &.sc-still,
+    &.sc-hover {
+      background-size: unit((@width * length(@icons) / @retina-factor), px);
+      background-image: %(~"url(%s%s%s.png)", @path, @basename-stills-sprite, @basename-retina);
+    }
+  }
 }

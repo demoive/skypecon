@@ -8,13 +8,6 @@
 
   width: unit(@width, px);
   height: unit(@height, px);
-
-  // Double the dimensions for retina.
-  &.sc-2x {
-    width: (@retina-factor * unit(@width, px));
-    height: (@retina-factor * unit(@height, px));
-  }
-
   // Prevents animation for still mode.
   &.sc-still,
   &.sc-still.sc-2x {
