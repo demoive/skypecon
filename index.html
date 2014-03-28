@@ -48,23 +48,23 @@
               <div class="form-group">
                 <label class="col-xs-3 control-label input-sm">Animation</label>
                 <div class="col-xs-9 btn-group options">
-                  <label class="btn btn-default btn-sm"><input type="radio" name="option-animate" id="option-animation-still"><code>.sc-still</code></label>
-                  <label class="btn btn-default btn-sm"><input type="radio" name="option-animate" id="option-animation-hover"><code>.sc-hover</code></label>
+                  <label class="btn btn-default btn-sm" title="Prevents the animation altogether" data-toggle="tooltip"><input type="radio" name="option-animate" id="option-animation-still"><code>.sc-still</code></label>
+                  <label class="btn btn-default btn-sm" title="Only animate on hover" data-toggle="tooltip"><input type="radio" name="option-animate" id="option-animation-hover"><code>.sc-hover</code></label>
                 </div>
               </div>
 
               <div class="form-group">
                 <label class="col-xs-3 control-label input-sm">Speed</label>
                 <div class="col-xs-9 btn-group options">
-                  <label class="btn btn-default btn-sm"><input type="radio" name="option-speed" id="option-speed-slow"><code>.sc-slow</code></label>
-                  <label class="btn btn-default btn-sm"><input type="radio" name="option-speed" id="option-speed-fast"><code>.sc-fast</code></label>
+                  <label class="btn btn-default btn-sm" title="Reduces the animation to ~20fps" data-toggle="tooltip"><input type="radio" name="option-speed" id="option-speed-slow"><code>.sc-slow</code></label>
+                  <label class="btn btn-default btn-sm" title="Increases the animation to ~40fps" data-toggle="tooltip"><input type="radio" name="option-speed" id="option-speed-fast"><code>.sc-fast</code></label>
                 </div>
               </div>
 
               <div class="form-group">
                 <label class="col-xs-3 control-label input-sm">Size</label>
                 <div class="col-xs-9 btn-group options">
-                  <label class="btn btn-default btn-sm"><input type="radio" name="option-size" id="option-size-2x"><code>.sc-2x</code></label>
+                  <label class="btn btn-default btn-sm" title="Increases the dimensions to 40px. Has no effect on retina screens." data-toggle="tooltip"><input type="radio" name="option-size" id="option-size-2x"><code>.sc-2x</code></label>
                 </div>
               </div>
             </form>
@@ -210,8 +210,8 @@
     <script>
       $(function () {
         var $snippetCode = $('#snippet-code'),
-          $snippetPreview = $('#snippet-preview');
-          window.snippetOptions = {
+          $snippetPreview = $('#snippet-preview'),
+          snippetOptions = {
             emoticon: 'smile',
             speed: '',
             animation: '',
@@ -229,6 +229,13 @@
           $(this).find('.sc').removeClass('sc-still');
         }, function () {
           $(this).find('.sc').addClass('sc-still');
+        });
+
+        // Initialize Bootstrap's tooltips
+        $('.btn').tooltip({
+          placement: 'top',
+          animation: false,
+          container: 'body'
         });
 
         // User interaction to choose an emoticon.
