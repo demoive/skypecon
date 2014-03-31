@@ -24,19 +24,37 @@ gulp.task('copy:dev', function () {
   gulp.src('./src/*.html')
       .pipe(gulp.dest('./dev'));
 
-  gulp.src('./src/skype-icons/*')
+  gulp.src('./src/emoticons/stills*.png')
+      .pipe(gulp.dest('./dev/img'));
+
+  gulp.src('./src/emoticons/anim/*.png')
+      .pipe(rename({suffix: "_anim"}))
+      .pipe(gulp.dest('./dev/img'));
+
+  gulp.src('./src/emoticons/anim@2x/*.png')
+      .pipe(rename({suffix: "_anim@2x"}))
       .pipe(gulp.dest('./dev/img'));
 });
 
 gulp.task('copy:dist', function () {
-  gulp.src('./src/skype-icons/**/*')
+  gulp.src('./src/emoticons/stills*.png')
+      .pipe(gulp.dest('./dist/img'));
+
+  gulp.src('./src/emoticons/anim/*.png')
+      .pipe(rename({suffix: "_anim"}))
+      .pipe(gulp.dest('./dist/img'));
+
+  gulp.src('./src/emoticons/anim@2x/*.png')
+      .pipe(rename({suffix: "_anim@2x"}))
       .pipe(gulp.dest('./dist/img'));
 });
 // Error occuring for now...
 // gulp.task('imagemin:dist', function() {
-//   gulp.src('src/skype-icons/**/*')
+//   //gulp.src('src/skype-icons/**/*')
+//   gulp.src('./src/emoticons/anim/[a-m]*.png')
 //       .pipe(imagemin())
-//       .pipe(gulp.dest('dist/img'));
+//       .pipe(rename({suffix: "_anim"}))
+//       .pipe(gulp.dest('./dist/img'));
 // });
 
 

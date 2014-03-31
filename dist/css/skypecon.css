@@ -6474,11 +6474,11 @@
 }
 .sc.sc-still,
 .sc.sc-hover {
-  background-image: url(../img/_stills.png);
+  background-image: url(../img/stills.png);
 }
 .sc.sc-still.sc-2x,
 .sc.sc-hover.sc-2x {
-  background-image: url(../img/_stills@2x.png);
+  background-image: url(../img/stills@2x.png);
 }
 .sc.sc-2x {
   width: 40px;
@@ -7770,7 +7770,7 @@
   .sc.sc-still,
   .sc.sc-hover {
     background-size: 1960px;
-    background-image: url(../img/_stills@2x.png);
+    background-image: url(../img/stills@2x.png);
   }
 }
 .sc {
