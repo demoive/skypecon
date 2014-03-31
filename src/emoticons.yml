@@ -624,6 +624,13 @@
   category: hidden
   status: active
 
+- name: Tauri
+  key: tauri
+  frames: 37
+  codes: ['(tauri)', '(dull_tauri)']
+  category: staff
+  status: removed
+
 - name: Thinking
   key: thinking
   frames: 58
