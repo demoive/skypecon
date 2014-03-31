@@ -428,6 +428,13 @@
   category: standard
   status: active
 
+# - name: Myspace
+#   key: myspace
+#   frames: 0
+#   codes: ['(myspace)']
+#   category: hidden
+#   status: removed
+
 - name: Nerd
   key: nerd
   frames: 47
