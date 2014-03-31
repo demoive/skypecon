@@ -89,12 +89,12 @@ gulp.task('less:minify', function () {
 
 
 gulp.task('clean:dev', function () {
-  gulp.src('./dev', {read: false})
+  return gulp.src('./dev', {read: false})
     .pipe(clean());
 });
 
 gulp.task('clean:dist', function () {
-  gulp.src('./dist', {read: false})
+  return gulp.src('./dist', {read: false})
     .pipe(clean());
 });
 
