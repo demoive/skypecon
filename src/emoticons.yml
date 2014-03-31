@@ -43,6 +43,13 @@
   category: standard
   status: active
 
+- name: Bike
+  key: bike
+  frames: 7
+  codes: ['(bike)']
+  category: hidden
+  status: active
+
 - name: Blush
   key: blushing
   frames: 68
@@ -92,6 +99,13 @@
   category: standard
   status: active
 
+- name: Cat
+  key: cat
+  frames: 119
+  codes: ['(cat)', ':3']
+  category: hidden
+  status: active
+
 - name: Clapping
   key: clapping
   frames: 39
@@ -132,6 +146,13 @@
   frames: 66
   codes: ['(devil)']
   category: standard
+  status: active
+
+- name: Dog
+  key: dog
+  frames: 53
+  codes: ['(dog)']
+  category: hidden
   status: active
 
 - name: Doh!
@@ -286,6 +307,13 @@
   frames: 75
   codes: ['(bear)', '(hug)']
   category: standard
+  status: active
+
+- name: Idea
+  key: idea
+  frames: 118
+  codes: ['(idea)']
+  category: hidden
   status: active
 
 - name: In Love
@@ -498,6 +526,20 @@
   category: standard
   status: active
 
+- name: Sheep
+  key: sheep
+  frames: 110
+  codes: ['(sheep)']
+  category: hidden
+  status: active
+
+- name: Skype
+  key: skype
+  frames: 1
+  codes: ['(skype)', '(ss)']
+  category: hidden
+  status: active
+
 - name: Sleepy
   key: sleepy
   frames: 71
@@ -572,6 +614,13 @@
   key: talking
   frames: 46
   codes: ['(talk)']
+  category: hidden
+  status: active
+
+- name: Talk to the hand
+  key: talktothehand
+  frames: 61
+  codes: ['(talktothehand)']
   category: hidden
   status: active
 
