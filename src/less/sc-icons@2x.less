@@ -11,10 +11,9 @@ only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: ~"@{retina-factor}dppx") {
 
   // Dummy mixin to perform the loop for icon-specific styles.
-  .loop(@indx: 1) when (@indx < length(@icons)) {
+  .loop(@indx: 1) when (@indx < length(@emoticons)) {
 
-    @itr-key:            extract(@icons, @indx);
-    @itr-height-anim-2x: (@itr-height-anim * @retina-factor);
+    @itr-key:            extract(@emoticons, @indx);
 
     // Icon-specific animation information.
     .sc.sc-@{itr-key} {
@@ -68,7 +67,7 @@ only screen and (                min-resolution: ~"@{retina-factor}dppx") {
     // Force the background sprite image for the non-animation modes to the retina version.
     &.sc-still,
     &.sc-hover {
-      background-size: unit((@width * length(@icons) / @retina-factor), px);
+      background-size: unit((@width * length(@emoticons) / @retina-factor), px);
       background-image: %(~"url(%s%s%s.png)", @path, @basename-stills-sprite, @basename-retina);
     }
   }

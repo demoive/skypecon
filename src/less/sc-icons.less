@@ -1,9 +1,9 @@
 
 // Dummy mixin to perform the loop for icon-specific styles.
-.loop(@indx: 1) when (@indx < length(@icons)) {
+.loop(@indx: 1) when (@indx < length(@emoticons)) {
 
-  @itr-key:            extract(@icons, @indx);
-  @itr-height-anim:    extract(@icons, @indx + 1);
+  @itr-key:            extract(@emoticons, @indx);
+  @itr-height-anim:    (extract(@emoticons, @indx + 1) * @width);
   @itr-height-anim-2x: (@itr-height-anim * @retina-factor);
 
   @itr-animation-steps: (@itr-height-anim / @height);
