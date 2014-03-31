@@ -50,6 +50,13 @@
   category: hidden
   status: active
 
+- name: Black Widow
+  key: blackwidow
+  frames: 112
+  codes: ['(blackwidow)']
+  category: Captain America
+  status: active
+
 - name: Blush
   key: blushing
   frames: 68
@@ -71,6 +78,13 @@
   category: hidden
   status: active
 
+- name: Bucky
+  key: bucky
+  frames: 84
+  codes: ['(bucky)']
+  category: Captain America
+  status: active
+
 - name: Bug
   key: bug
   frames: 77
@@ -90,6 +104,13 @@
   frames: 45
   codes: ['(call)']
   category: hidden
+  status: active
+
+- name: Captain America
+  key: captain
+  frames: 77
+  codes: ['(captain)']
+  category: Captain America
   status: active
 
 - name: Cash
@@ -414,6 +435,13 @@
   category: standard
   status: active
 
+- name: Nick Fury
+  key: nickfury
+  frames: 104
+  codes: ['(nickfury)']
+  category: Captain America
+  status: active
+
 - name: Ninja
   key: ninja
   frames: 121
@@ -531,6 +559,13 @@
   frames: 110
   codes: ['(sheep)']
   category: hidden
+  status: active
+
+- name: Shield Deflect
+  key: shielddeflect
+  frames: 91
+  codes: ['(shielddeflect)']
+  category: Captain America
   status: active
 
 - name: Skype
