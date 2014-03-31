@@ -1,0 +1,786 @@
+# category: [standard, hidden, staff, {special}]
+# status: [active, removed]
+
+- name: Angel
+  key: angel
+  frames: 83
+  codes: ['(angel)']
+  category: standard
+  status: active
+
+- name: Angry
+  key: angry
+  frames: 113
+  codes: [':@', ':-@', ':=@', 'x(', 'x-(', 'x=(', 'X(', 'X-(', 'X=(', '(angry)']
+  category: standard
+  status: active
+
+- name: Bandit
+  key: bandit
+  frames: 101
+  codes: ['(bandit)']
+  category: standard
+  status: active
+
+- name: Soccer
+  key: bartlett
+  frames: 79
+  codes: ['(soccer)', '(so)', '(football)', '(bartlett)']
+  category: hidden #staff?
+  status: active
+
+- name: Beer
+  key: beer
+  frames: 75
+  codes: ['(beer)']
+  category: standard
+  status: active
+
+- name: Laugh
+  key: bigsmile
+  frames: 76
+  codes: [':D', ':=D', ':-D', ':d', ':=d', ':-d', '(lol)', '(laugh)']
+  category: standard
+  status: active
+
+- name: Bike
+  key: bike
+  frames: 7
+  codes: ['(bike)']
+  category: hidden
+  status: active
+
+- name: Black Widow
+  key: blackwidow
+  frames: 112
+  codes: ['(blackwidow)']
+  category: Captain America
+  status: active
+
+- name: Blush
+  key: blushing
+  frames: 68
+  codes: ['(blush)', ':$', ':-$', ':=$', ':">']
+  category: standard
+  status: active
+
+- name: Bowing
+  key: bow
+  frames: 59
+  codes: ['(bow)']
+  category: standard
+  status: active
+
+- name: Broken Heart
+  key: brokenheart
+  frames: 104
+  codes: ['(u)', '(U)', '(brokenheart)']
+  category: hidden
+  status: active
+
+- name: Bucky
+  key: bucky
+  frames: 84
+  codes: ['(bucky)']
+  category: Captain America
+  status: active
+
+- name: Bug
+  key: bug
+  frames: 77
+  codes: ['(bug)']
+  category: hidden
+  status: active
+
+- name: Cake
+  key: cake
+  frames: 99
+  codes: ['(^)', '(cake)']
+  category: standard
+  status: active
+
+- name: Call
+  key: call
+  frames: 45
+  codes: ['(call)']
+  category: hidden
+  status: active
+
+- name: Captain America
+  key: captain
+  frames: 77
+  codes: ['(captain)']
+  category: Captain America
+  status: active
+
+- name: Cash
+  key: cash
+  frames: 26
+  codes: ['($)', '(mo)', '(cash)']
+  category: standard
+  status: active
+
+- name: Cat
+  key: cat
+  frames: 119
+  codes: ['(cat)', ':3']
+  category: hidden
+  status: active
+
+- name: Clapping
+  key: clapping
+  frames: 39
+  codes: ['(clap)']
+  category: standard
+  status: active
+
+- name: Coffee
+  key: coffee
+  frames: 27
+  codes: ['(coffee)']
+  category: standard
+  status: active
+
+- name: Cool
+  key: cool
+  frames: 37
+  codes: ['8=)', '8-)', 'B=)', 'B-)', '(cool)']
+  category: standard
+  status: active
+
+- name: Crying
+  key: crying
+  frames: 49
+  codes: [';(', ';-(', ';=(', '(cry)']
+  category: standard
+  status: active
+
+- name: Dancing
+  key: dancing
+  frames: 205
+  codes: ['\\o/', '\\:D/', '\\:d/', '(dance)']
+  category: standard
+  status: active
+
+- name: Devil
+  key: devil
+  frames: 66
+  codes: ['(devil)']
+  category: standard
+  status: active
+
+- name: Dog
+  key: dog
+  frames: 53
+  codes: ['(dog)']
+  category: hidden
+  status: active
+
+- name: Doh!
+  key: doh
+  frames: 59
+  codes: ['(doh)']
+  category: standard
+  status: active
+
+- name: Drink
+  key: drink
+  frames: 62
+  codes: ['(d)', '(D)', '(drink)']
+  category: standard
+  status: active
+
+- name: Drunk
+  key: drunk
+  frames: 48
+  codes: ['(drunk)']
+  category: hidden
+  status: active
+
+- name: Dull
+  key: dull
+  frames: 76
+  codes: ['|(', '|-(', '|=(', '(dull)']
+  category: standard
+  status: active
+
+- name: Emo
+  key: emo
+  frames: 53
+  codes: ['(emo)']
+  category: standard
+  status: active
+
+- name: Envy
+  key: envy
+  frames: 67
+  codes: ['(envy)']
+  category: standard
+  status: active
+
+- name: Evil Grin
+  key: evilgrin
+  frames: 77
+  codes: [']:)', '>:)', '(grin)']
+  category: standard
+  status: active
+
+- name: Facepalm
+  key: facepalm
+  frames: 76
+  codes: ['(facepalm)']
+  category: standard
+  status: active
+
+- name: Finger
+  key: finger
+  frames: 41
+  codes: ['(finger)', '(fu)']
+  category: hidden
+  status: removed
+
+- name: Fingers
+  key: fingerscrossed
+  frames: 63
+  codes: ['(yn)', '(fingerscrossed)', '(fingers)']
+  category: standard
+  status: active
+
+- name: Flower
+  key: flower
+  frames: 82
+  codes: ['(f)', '(F)', '(flower)']
+  category: standard
+  status: active
+
+- name: Fubar
+  key: fubar
+  frames: 46
+  codes: ['(fubar)']
+  category: removed
+  status: active
+
+- name: Giggle
+  key: giggle
+  frames: 44
+  codes: ['(giggle)', '(chuckle)']
+  category: standard
+  status: active
+
+- name: Shaking Hands
+  key: handshake
+  frames: 61
+  codes: ['(handshake)']
+  category: standard
+  status: active
+
+- name: Happy
+  key: happy
+  frames: 69
+  codes: ['(happy)']
+  category: standard
+  status: active
+
+- name: Headbang
+  key: headbang
+  frames: 70
+  codes: ['(headbang)', '(banghead)']
+  category: hidden
+  status: active
+
+- name: Heart
+  key: heart
+  frames: 16
+  codes: ['(h)', '(H)', '(l)', '(L)', '<3', '(heart)']
+  category: standard
+  status: active
+
+- name: Squirrel
+  key: heidy
+  frames: 74
+  codes: ['(squirrel)', '(heidy)']
+  category: staff
+  status: active
+
+- name: Hi
+  key: hi
+  frames: 56
+  codes: ['(hi)', '(wave)']
+  category: standard
+  status: active
+
+- name: High Five
+  key: highfive
+  frames: 37
+  codes: ['(highfive)']
+  category: standard
+  status: active
+
+- name: Hollest
+  key: hollest
+  frames: 95
+  codes: ['(hollest)']
+  category: staff # Stella Hollest
+  status: removed
+
+- name: Bear-hug
+  key: hug
+  frames: 75
+  codes: ['(bear)', '(hug)']
+  category: standard
+  status: active
+
+- name: Idea
+  key: idea
+  frames: 118
+  codes: ['(idea)']
+  category: hidden
+  status: active
+
+- name: In Love
+  key: inlove
+  frames: 62
+  codes: ['(inlove)']
+  category: standard
+  status: active
+
+- name: It wasn't me
+  key: itwasntme
+  frames: 75
+  codes: ['(wasntme)']
+  category: standard
+  status: active
+
+- name: Kiss
+  key: kiss
+  frames: 59
+  codes: [':*', ':=*', ':-*', '(kiss)']
+  category: standard
+  status: active
+
+- name: Lalala
+  key: lalala
+  frames: 19
+  codes: ['(lalala)']
+  category: standard
+  status: active
+
+- name: Lips Sealed
+  key: lipssealed
+  frames: 49
+  codes: [':x', ':-x', ':X', ':-X', ':#', ':-#', ':=x', ':=X', ':=#']
+  category: standard
+  status: active
+
+- name: Mail
+  key: mail
+  frames: 53
+  codes: ['(e)', '(m)', '(mail)']
+  category: hidden
+  status: active
+
+- name: Make-up
+  key: makeup
+  frames: 107
+  codes: ['(makeup)', '(kate)']
+  category: standard #staff?
+  status: active
+
+- name: Malthe
+  key: malthe
+  frames: 66
+  codes: ['(malthe)']
+  category: staff # Malthe Sigurdsson, Creative Director
+  status: removed
+
+- name: Mmm...
+  key: mmm
+  frames: 92
+  codes: ['(mm)', '(mmm)', '(mmmm)']
+  category: standard
+  status: active
+
+- name: Mooning
+  key: mooning
+  frames: 45
+  codes: ['(mooning)']
+  category: hidden
+  status: active
+
+- name: Movie
+  key: movie
+  frames: 54
+  codes: ['(~)', '(film)', '(movie)']
+  category: hidden
+  status: active
+
+- name: Muscle
+  key: muscle
+  frames: 58
+  codes: ['(muscle)', '(flex)']
+  category: standard
+  status: active
+
+- name: Music
+  key: music
+  frames: 54
+  codes: ['(music)']
+  category: standard
+  status: active
+
+# - name: Myspace
+#   key: myspace
+#   frames: 0
+#   codes: ['(myspace)']
+#   category: hidden
+#   status: removed
+
+- name: Nerd
+  key: nerd
+  frames: 47
+  codes: ['8-|', 'B-|', '8|', 'B|', '8=|', 'B=|', '(nerd)']
+  category: standard
+  status: active
+
+- name: Nick Fury
+  key: nickfury
+  frames: 104
+  codes: ['(nickfury)']
+  category: Captain America
+  status: active
+
+- name: Ninja
+  key: ninja
+  frames: 121
+  codes: ['(ninja)']
+  category: standard
+  status: active
+
+- name: No
+  key: no
+  frames: 54
+  codes: ['(n)', '(N)', '(no)']
+  category: standard
+  status: active
+
+- name: Nodding
+  key: nod
+  frames: 50
+  codes: ['(nod)']
+  category: standard
+  status: active
+
+- name: Oliver
+  key: oliver
+  frames: 63
+  codes: ['(oliver)']
+  category: staff
+  status: active
+
+- name: Party!!!
+  key: party
+  frames: 70
+  codes: ['(party)']
+  category: standard
+  status: active
+
+- name: Phone
+  key: phone
+  frames: 88
+  codes: ['(mp)', '(ph)', '(phone)']
+  category: hidden
+  status: active
+
+- name: Pizza
+  key: pizza
+  frames: 90
+  codes: ['(pi)', '(pizza)']
+  category: standard
+  status: active
+
+- name: Pool Party
+  key: poolparty
+  frames: 87
+  codes: ['(poolparty)']
+  category: hidden
+  status: active
+
+- name: Priidu
+  key: priidu
+  frames: 61
+  codes: ['(zilmer)']
+  category: staff # Priidu Zilmer, Visual Design Team lead
+  status: removed
+
+- name: Puke
+  key: puking
+  frames: 78
+  codes: [':&', ':-&', ':=&', '(puke)']
+  category: standard
+  status: active
+
+- name: Punching
+  key: punch
+  frames: 43
+  codes: ['(punch)']
+  category: hidden
+  status: active
+
+- name: Raining
+  key: rain
+  frames: 29
+  codes: ['(rain)', '(london)', '(st)']
+  category: standard
+  status: active
+
+- name: Rock 'n' Roll
+  key: rock
+  frames: 11
+  codes: ['(rock)']
+  category: hidden
+  status: active
+
+- name: Rolling on the floor laughing
+  key: rofl
+  frames: 80
+  codes: ['(rofl)']
+  category: standard
+  status: active
+
+- name: Sad
+  key: sadsmile
+  frames: 62
+  codes: [':(', ':=(', ':-(', '(sad)']
+  category: standard
+  status: active
+
+- name: Shaking
+  key: shake
+  frames: 50
+  codes: ['(shake)']
+  category: standard
+  status: active
+
+- name: Sheep
+  key: sheep
+  frames: 110
+  codes: ['(sheep)']
+  category: hidden
+  status: active
+
+- name: Shield Deflect
+  key: shielddeflect
+  frames: 91
+  codes: ['(shielddeflect)']
+  category: Captain America
+  status: active
+
+- name: Skype
+  key: skype
+  frames: 1
+  codes: ['(skype)', '(ss)']
+  category: hidden
+  status: active
+
+- name: Sleepy
+  key: sleepy
+  frames: 71
+  codes: ['|-)', 'I-)', 'I=)', '(snooze)']
+  category: standard
+  status: active
+
+- name: Smile
+  key: smile
+  frames: 52
+  codes: [':)', ':=)', ':-)', '(smile)']
+  category: standard
+  status: active
+
+- name: Smirking
+  key: smirk
+  frames: 53
+  codes: ['(smirk)']
+  category: standard
+  status: active
+
+- name: Smoking
+  key: smoking
+  frames: 64
+  codes: ['(smoking)', '(smoke)', '(ci)']
+  category: hidden
+  status: active
+
+- name: Speechless
+  key: speechless
+  frames: 66
+  codes: [':|', ':=|', ':-|', '(speechless)']
+  category: standard
+  status: active
+
+- name: Star
+  key: star
+  frames: 63
+  codes: ['(*)', '(star)']
+  category: standard
+  status: active
+
+- name: Sun
+  key: sunshine
+  frames: 26
+  codes: ['(sun)']
+  category: standard
+  status: active
+
+- name: Surprised
+  key: surprised
+  frames: 67
+  codes: [':o', ':=o', ':-o', ':O', ':=O', ':-O', '(surprised)']
+  category: standard
+  status: active
+
+- name: Swearing
+  key: swear
+  frames: 76
+  codes: ['(swear)']
+  category: hidden
+  status: active
+
+- name: Sweating
+  key: sweating
+  frames: 68
+  codes: ['(:|', '(sweat)']
+  category: standard
+  status: active
+
+- name: Talking
+  key: talking
+  frames: 46
+  codes: ['(talk)']
+  category: hidden
+  status: active
+
+- name: Talk to the hand
+  key: talktothehand
+  frames: 61
+  codes: ['(talktothehand)']
+  category: hidden
+  status: active
+
+- name: Tauri
+  key: tauri
+  frames: 37
+  codes: ['(tauri)', '(dull_tauri)']
+  category: staff
+  status: removed
+
+- name: Thinking
+  key: thinking
+  frames: 58
+  codes: [':?', ':-?', ':=?', '(think)']
+  category: standard
+  status: active
+
+- name: Time
+  key: time
+  frames: 59
+  codes: ['(o)', '(O)', '(time)']
+  category: hidden
+  status: active
+
+- name: Too much information
+  key: tmi
+  frames: 55
+  codes: ['(tmi)']
+  category: standard
+  status: active
+
+- name: Toivo
+  key: toivo
+  frames: 83
+  codes: ['(toivo)']
+  category: staff # Toivo Annus, Head of Engineering
+  status: active
+
+- name: Cheeky
+  key: tongueout
+  frames: 48
+  codes: [':P', ':=P', ':-P', ':p', ':=p', ':-p', '(tongueout)']
+  category: standard
+  status: active
+
+- name: Tumbleweed
+  key: tumbleweed
+  frames: 31
+  codes: ['(tumbleweed)']
+  category: standard
+  status: active
+
+- name: Wait
+  key: wait
+  frames: 44
+  codes: ['(wait)']
+  category: standard
+  status: active
+
+- name: Waiting
+  key: waiting
+  frames: 50
+  codes: ['(waiting)']
+  category: standard
+  status: active
+
+- name: Working from home
+  key: wfh
+  frames: 78
+  codes: ['(wfh)']
+  category: hidden
+  status: active
+
+- name: Relieved
+  key: whew
+  frames: 50
+  codes: ['(whew)', '(relieved)']
+  category: standard
+  status: active
+
+- name: Wink
+  key: wink
+  frames: 35
+  codes: [';)', ';-)', ';=)', '(wink)']
+  category: standard
+  status: active
+
+- name: Wondering
+  key: wondering
+  frames: 69
+  codes: [':^)', '(wonder)']
+  category: standard
+  status: active
+
+- name: Worried
+  key: worried
+  frames: 55
+  codes: [':S', ':-S', ':=S', ':s', ':-s', ':=s']
+  category: standard
+  status: active
+
+- name: wtf
+  key: wtf
+  frames: 56
+  codes: ['(wtf)']
+  category: hidden
+  status: removed
+
+- name: Yawn
+  key: yawning
+  frames: 73
+  codes: ['(yawn)']
+  category: standard
+  status: active
+
+- name: Yes
+  key: yes
+  frames: 39
+  codes: ['(y)', '(Y)', '(ok)', '(yes)']
+  category: standard
+  status: active
