@@ -1,6 +1,6 @@
 # Skypecon
 
-A library that enabling the [Skypecon](http://demoive.github.io/skypecon) catalog site which showcases all the Skype icons in their full, native quality. It makes their usage web-friendly leveraging all the webby things we love like CSS for animations, retina support, etc.
+A library enabling the [Skypecon](http://demoive.github.io/skypecon) catalog site to showcase all the Skype icons in their full, native quality. The usage is web-friendly and leverages all the webby things we love like CSS for animations, retina support, etc.
 
 <!--
 ## Roadmap
@@ -62,7 +62,7 @@ The [Phantom Open Emoji](https://github.com/Genshin/PhantomOpenEmoji) is promisi
 
 ## License
 
-The icons were not made by me - they are the property of [Skype](http://www.skype.com/) and should be used according to their license and usage terms. All the other code is my own work and is licensed under the [MIT License](https://github.com/demoive/skypecon/blob/master/LICENSE).
+The icons were not made by me - they are the property of [Skype](http://www.skype.com/) and should be used according to their [license and usage terms](http://www.skype.com/en/legal/brand-guidelines/). All the other code is my own work and is licensed under the [MIT License](https://github.com/demoive/skypecon/blob/master/LICENSE).
 
 
 ## Changelog
