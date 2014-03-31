@@ -36,26 +36,22 @@ gulp.task('copy:dev', function () {
       .pipe(gulp.dest('./dev/img'));
 });
 
-gulp.task('copy:dist', function () {
+// Be sure the `ulimit -n 1024` is increased in .bash_profile
+gulp.task('imagemin:dist', function() {
   gulp.src('./src/emoticons/stills*.png')
+      .pipe(imagemin())
       .pipe(gulp.dest('./dist/img'));
 
   gulp.src('./src/emoticons/anim/*.png')
+      .pipe(imagemin())
       .pipe(rename({suffix: "_anim"}))
       .pipe(gulp.dest('./dist/img'));
 
   gulp.src('./src/emoticons/anim@2x/*.png')
+      .pipe(imagemin())
       .pipe(rename({suffix: "_anim@2x"}))
       .pipe(gulp.dest('./dist/img'));
 });
-// Error occuring for now...
-// gulp.task('imagemin:dist', function() {
-//   //gulp.src('src/skype-icons/**/*')
-//   gulp.src('./src/emoticons/anim/[a-m]*.png')
-//       .pipe(imagemin())
-//       .pipe(rename({suffix: "_anim"}))
-//       .pipe(gulp.dest('./dist/img'));
-// });
 
 
 gulp.task('less:dev', function () {
@@ -104,7 +100,7 @@ gulp.task('clean:all', ['clean:dev', 'clean:dist'], function () {
 });
 
 gulp.task('build:dev', ['less:dev', 'copy:dev']);
-gulp.task('build:dist', ['clean:dist', 'copy:dist'/*'imagemin:dist'*/, 'less:dist', 'less:minify']);
+gulp.task('build:dist', ['clean:dist', 'imagemin:dist', 'less:dist', 'less:minify']);
 
 gulp.task('default', ['build:dist'], function () {
   // place [additional] code for your default task here
