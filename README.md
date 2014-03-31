@@ -1,6 +1,6 @@
 # Skypecon
 
-This is the library that powers the [Skypecon](http://demoive.github.io/skypecon) catalog site which showcases all the Skype icons in their full, native quality. It makes their usage web-friendly leveraging all the webby things we love like CSS for animations, retina support, etc.
+A library that enabling the [Skypecon](http://demoive.github.io/skypecon) catalog site which showcases all the Skype icons in their full, native quality. It makes their usage web-friendly leveraging all the webby things we love like CSS for animations, retina support, etc.
 
 <!--
 ## Roadmap
@@ -33,9 +33,9 @@ You're better off [playing around with the different options](http://demoive.git
 
 ## Notice
 
-This library was created with the utmost respect for the people responsible for the icons at Skype and it exists in order to to be able to properly showcase their work plus allowing for some flexibility in its demonstration.
+This library was created with the utmost respect for the people responsible for the icons at Skype and exists to properly showcase their work while allowing some flexibility in its demonstration.
 
-There are numerous sites around the web that catalog the emoticons and flags that are available for our use in Skype, (including the popular hidden icons), however, none take advantage of showing the native (smooth) animation available and very few even show the icons in all their glory and different sizes. Not to mention they aren't driven by the community and don't appear easy to maintain or to scale well.
+There are numerous sites around the web that catalog the emoticons and flags that are available in Skype, (especially for the popular hidden ones), however, none take advantage of showing the native (smooth) animation available and very few even show the icons in all their glory and different sizes. Not to mention they aren't driven by the community and don't appear easy to maintain or to scale well.
 
 
 ## Skype plug
@@ -95,7 +95,7 @@ The icons were not made by me - they are the property of [Skype](http://www.skyp
 - Added necessary vendor prefixes
 
 ### v0.5.0
-- POC already supports the following features:
+- POC already supported the following features:
   - Change animation speeds with `.sc-slow` & `.sc-fast`
   - Only animate on hover with `.sc-hover`
   - Enlarge to twice the size (40px) with `.sc-2x`
