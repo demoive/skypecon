@@ -80,7 +80,7 @@
         <div class="col-xs-6 col-md-3">
           <div class="btn-group-vertical emoticons">
 
-            {% for emoticon in site.data.emoticons %}
+            {% for emoticon in site.emoticons %}
             <label class="btn btn-default btn-sm">
               <input type="radio" name="emoticon" id="emoticon-{{ emoticon.key }}" title="{{ emoticon.name }}">
               <i class="sc sc-{{ emoticon.key }} sc-still"></i>
