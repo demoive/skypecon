@@ -76,18 +76,149 @@
     <div class="container">
       <h2>Available emoticons</h2>
 
+<!--
+Feature not fully working yet
+https://github.com/jekyll/jekyll/issues/1689
+https://github.com/jekyll/jekyll/pull/1003
+
+{% for emoticon in site.data.emoticons %}
+<label class="btn btn-default btn-sm">
+  <input type="radio" name="emoticon" id="emoticon-{{ emoticon.key }}" title="{{ emoticon.name }}">
+  <i class="sc sc-{{ emoticon.key }} sc-still"></i>
+  <code>.sc-{{ emoticon.key }}</code>
+</label>
+{% endfor %}
+-->
+
       <div class="row">
         <div class="col-xs-6 col-md-3">
           <div class="btn-group-vertical emoticons">
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-angel"><i class="sc sc-angel sc-still"></i> <code>.sc-angel</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-angry"><i class="sc sc-angry sc-still"></i> <code>.sc-angry</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-bandit"><i class="sc sc-bandit sc-still"></i> <code>.sc-bandit</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-bartlett"><i class="sc sc-bartlett sc-still"></i> <code>.sc-bartlett</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-beer"><i class="sc sc-beer sc-still"></i> <code>.sc-beer</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-bigsmile"><i class="sc sc-bigsmile sc-still"></i> <code>.sc-bigsmile</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-bike"><i class="sc sc-bike sc-still"></i> <code>.sc-bike</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-blackwidow"><i class="sc sc-blackwidow sc-still"></i> <code>.sc-blackwidow</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-blushing"><i class="sc sc-blushing sc-still"></i> <code>.sc-blushing</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-bow"><i class="sc sc-bow sc-still"></i> <code>.sc-bow</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-brokenheart"><i class="sc sc-brokenheart sc-still"></i> <code>.sc-brokenheart</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-bucky"><i class="sc sc-bucky sc-still"></i> <code>.sc-bucky</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-bug"><i class="sc sc-bug sc-still"></i> <code>.sc-bug</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-cake"><i class="sc sc-cake sc-still"></i> <code>.sc-cake</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-call"><i class="sc sc-call sc-still"></i> <code>.sc-call</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-captain"><i class="sc sc-captain sc-still"></i> <code>.sc-captain</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-cash"><i class="sc sc-cash sc-still"></i> <code>.sc-cash</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-cat"><i class="sc sc-cat sc-still"></i> <code>.sc-cat</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-clapping"><i class="sc sc-clapping sc-still"></i> <code>.sc-clapping</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-coffee"><i class="sc sc-coffee sc-still"></i> <code>.sc-coffee</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-cool"><i class="sc sc-cool sc-still"></i> <code>.sc-cool</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-crying"><i class="sc sc-crying sc-still"></i> <code>.sc-crying</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-dancing"><i class="sc sc-dancing sc-still"></i> <code>.sc-dancing</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-devil"><i class="sc sc-devil sc-still"></i> <code>.sc-devil</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-dog"><i class="sc sc-dog sc-still"></i> <code>.sc-dog</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-doh"><i class="sc sc-doh sc-still"></i> <code>.sc-doh</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-drink"><i class="sc sc-drink sc-still"></i> <code>.sc-drink</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-drunk"><i class="sc sc-drunk sc-still"></i> <code>.sc-drunk</code></label>
+          </div>
+        </div>
 
-            {% for emoticon in site.emoticons %}
-            <label class="btn btn-default btn-sm">
-              <input type="radio" name="emoticon" id="emoticon-{{ emoticon.key }}" title="{{ emoticon.name }}">
-              <i class="sc sc-{{ emoticon.key }} sc-still"></i>
-              <code>.sc-{{ emoticon.key }}</code>
-            </label>
-            {% endfor %}
+        <div class="col-xs-6 col-md-3">
+          <div class="btn-group-vertical emoticons">
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-dull"><i class="sc sc-dull sc-still"></i> <code>.sc-dull</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-emo"><i class="sc sc-emo sc-still"></i> <code>.sc-emo</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-envy"><i class="sc sc-envy sc-still"></i> <code>.sc-envy</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-evilgrin"><i class="sc sc-evilgrin sc-still"></i> <code>.sc-evilgrin</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-facepalm"><i class="sc sc-facepalm sc-still"></i> <code>.sc-facepalm</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-finger"><i class="sc sc-finger sc-still"></i> <code>.sc-finger</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-fingerscrossed"><i class="sc sc-fingerscrossed sc-still"></i> <code>.sc-fingerscrossed</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-flower"><i class="sc sc-flower sc-still"></i> <code>.sc-flower</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-fubar"><i class="sc sc-fubar sc-still"></i> <code>.sc-fubar</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-giggle"><i class="sc sc-giggle sc-still"></i> <code>.sc-giggle</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-handshake"><i class="sc sc-handshake sc-still"></i> <code>.sc-handshake</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-happy"><i class="sc sc-happy sc-still"></i> <code>.sc-happy</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-headbang"><i class="sc sc-headbang sc-still"></i> <code>.sc-headbang</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-heart"><i class="sc sc-heart sc-still"></i> <code>.sc-heart</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-heidy"><i class="sc sc-heidy sc-still"></i> <code>.sc-heidy</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-hi"><i class="sc sc-hi sc-still"></i> <code>.sc-hi</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-highfive"><i class="sc sc-highfive sc-still"></i> <code>.sc-highfive</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-hollest"><i class="sc sc-hollest sc-still"></i> <code>.sc-hollest</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-hug"><i class="sc sc-hug sc-still"></i> <code>.sc-hug</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-idea"><i class="sc sc-idea sc-still"></i> <code>.sc-idea</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-inlove"><i class="sc sc-inlove sc-still"></i> <code>.sc-inlove</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-itwasntme"><i class="sc sc-itwasntme sc-still"></i> <code>.sc-itwasntme</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-kiss"><i class="sc sc-kiss sc-still"></i> <code>.sc-kiss</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-lalala"><i class="sc sc-lalala sc-still"></i> <code>.sc-lalala</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-lipssealed"><i class="sc sc-lipssealed sc-still"></i> <code>.sc-lipssealed</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-mail"><i class="sc sc-mail sc-still"></i> <code>.sc-mail</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-makeup"><i class="sc sc-makeup sc-still"></i> <code>.sc-makeup</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-malthe"><i class="sc sc-malthe sc-still"></i> <code>.sc-malthe</code></label>
+          </div>
+        </div>
 
+        <div class="col-xs-6 col-md-3">
+          <div class="btn-group-vertical emoticons">
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-mmm"><i class="sc sc-mmm sc-still"></i> <code>.sc-mmm</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-mooning"><i class="sc sc-mooning sc-still"></i> <code>.sc-mooning</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-movie"><i class="sc sc-movie sc-still"></i> <code>.sc-movie</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-muscle"><i class="sc sc-muscle sc-still"></i> <code>.sc-muscle</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-music"><i class="sc sc-music sc-still"></i> <code>.sc-music</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-nerd"><i class="sc sc-nerd sc-still"></i> <code>.sc-nerd</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-nickfury"><i class="sc sc-nickfury sc-still"></i> <code>.sc-nickfury</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-ninja"><i class="sc sc-ninja sc-still"></i> <code>.sc-ninja</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-no"><i class="sc sc-no sc-still"></i> <code>.sc-no</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-nod"><i class="sc sc-nod sc-still"></i> <code>.sc-nod</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-oliver"><i class="sc sc-oliver sc-still"></i> <code>.sc-oliver</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-party"><i class="sc sc-party sc-still"></i> <code>.sc-party</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-phone"><i class="sc sc-phone sc-still"></i> <code>.sc-phone</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-pizza"><i class="sc sc-pizza sc-still"></i> <code>.sc-pizza</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-poolparty"><i class="sc sc-poolparty sc-still"></i> <code>.sc-poolparty</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-priidu"><i class="sc sc-priidu sc-still"></i> <code>.sc-priidu</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-puking"><i class="sc sc-puking sc-still"></i> <code>.sc-puking</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-punch"><i class="sc sc-punch sc-still"></i> <code>.sc-punch</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-rain"><i class="sc sc-rain sc-still"></i> <code>.sc-rain</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-rock"><i class="sc sc-rock sc-still"></i> <code>.sc-rock</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-rofl"><i class="sc sc-rofl sc-still"></i> <code>.sc-rofl</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-sadsmile"><i class="sc sc-sadsmile sc-still"></i> <code>.sc-sadsmile</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-shake"><i class="sc sc-shake sc-still"></i> <code>.sc-shake</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-sheep"><i class="sc sc-sheep sc-still"></i> <code>.sc-sheep</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-shielddeflect"><i class="sc sc-shielddeflect sc-still"></i> <code>.sc-shielddeflect</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-skype"><i class="sc sc-skype sc-still"></i> <code>.sc-skype</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-sleepy"><i class="sc sc-sleepy sc-still"></i> <code>.sc-sleepy</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-smile"><i class="sc sc-smile sc-still"></i> <code>.sc-smile</code></label>
+          </div>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <div class="btn-group-vertical emoticons">
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-smirk"><i class="sc sc-smirk sc-still"></i> <code>.sc-smirk</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-smoking"><i class="sc sc-smoking sc-still"></i> <code>.sc-smoking</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-speechless"><i class="sc sc-speechless sc-still"></i> <code>.sc-speechless</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-star"><i class="sc sc-star sc-still"></i> <code>.sc-star</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-sunshine"><i class="sc sc-sunshine sc-still"></i> <code>.sc-sunshine</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-surprised"><i class="sc sc-surprised sc-still"></i> <code>.sc-surprised</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-swear"><i class="sc sc-swear sc-still"></i> <code>.sc-swear</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-sweating"><i class="sc sc-sweating sc-still"></i> <code>.sc-sweating</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-talking"><i class="sc sc-talking sc-still"></i> <code>.sc-talking</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-talktothehand"><i class="sc sc-talktothehand sc-still"></i> <code>.sc-talktothehand</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-tauri"><i class="sc sc-tauri sc-still"></i> <code>.sc-tauri</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-thinking"><i class="sc sc-thinking sc-still"></i> <code>.sc-thinking</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-time"><i class="sc sc-time sc-still"></i> <code>.sc-time</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-tmi"><i class="sc sc-tmi sc-still"></i> <code>.sc-tmi</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-toivo"><i class="sc sc-toivo sc-still"></i> <code>.sc-toivo</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-tongueout"><i class="sc sc-tongueout sc-still"></i> <code>.sc-tongueout</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-tumbleweed"><i class="sc sc-tumbleweed sc-still"></i> <code>.sc-tumbleweed</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-wait"><i class="sc sc-wait sc-still"></i> <code>.sc-wait</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-waiting"><i class="sc sc-waiting sc-still"></i> <code>.sc-waiting</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-wfh"><i class="sc sc-wfh sc-still"></i> <code>.sc-wfh</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-whew"><i class="sc sc-whew sc-still"></i> <code>.sc-whew</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-wink"><i class="sc sc-wink sc-still"></i> <code>.sc-wink</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-wondering"><i class="sc sc-wondering sc-still"></i> <code>.sc-wondering</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-worried"><i class="sc sc-worried sc-still"></i> <code>.sc-worried</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-wtf"><i class="sc sc-wtf sc-still"></i> <code>.sc-wtf</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-yawning"><i class="sc sc-yawning sc-still"></i> <code>.sc-yawning</code></label>
+            <label class="btn btn-default btn-sm"><input type="radio" name="emoticon" id="emoticon-yes"><i class="sc sc-yes sc-still"></i> <code>.sc-yes</code></label>
           </div>
         </div>
       </div>
