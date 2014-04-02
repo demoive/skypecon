@@ -33,9 +33,9 @@ You're better off [playing around with the different options](http://demoive.git
 
 ## Notice
 
-This library was created with the utmost respect for the people responsible for the icons at Skype and exists to properly showcase their work while allowing some flexibility in its demonstration.
+This library was created with the utmost respect for the people responsible for the icons at Skype and exists to properly showcase their work (while allowing some flexibility in its demonstration as well).
 
-There are numerous sites around the web that catalog the emoticons and flags that are available in Skype, (especially for the popular hidden ones), however, none take advantage of showing the native (smooth) animation available and very few even show the icons in all their glory and different sizes. Not to mention they aren't driven by the community and don't appear easy to maintain or to scale well.
+There are many sites around the web that also catalog the emoticons and flags that are available in Skype, (especially for the popular hidden ones), however, none show the icons in their best potential quality (both in resolution and smoothness in the animation) of how they are shown within the Skype application. Not to mention they aren't driven by the community and don't appear easy to maintain or to scale well.
 
 
 ## Skype plug
@@ -47,7 +47,7 @@ The Skype team really hits a sweet spot in the set of icons they offer, achievin
 3. appropriate animations
 4. correct level of "cuteness"
 
-I think others fail in at least one of these criteria. The [Emoji](http://www.emoji-cheat-sheet.com/) set is popular but doesn't offer animation and is too over-whelming. For example, I feel the following emotions don't warrant different icons:
+I think other emoticons available today fail in at least one of these criteria. The [Emoji](http://www.emoji-cheat-sheet.com/) set is popular but doesn't offer animation and has an over-whelming number of options. For example, I feel the following emotions don't warrant different icons:
 
 - **tongue**: :stuck_out_tongue_closed_eyes: :stuck_out_tongue: :stuck_out_tongue_winking_eye:
 - **kiss**: :kissing: :kissing_smiling_eyes: :kissing_closed_eyes: :kissing_heart:
@@ -84,7 +84,7 @@ The icons were not made by me - they are the property of [Skype](http://www.skyp
 ### v0.5.3
 - Fixed "playing too fast" bug on retina screens
 - Fixed "white content" bug on retina screens
-- Using sprite for when the non-animated images are shown (.`sc-still` & `.sc-hover`)
+- Using sprite for when the non-animated images are shown (`.sc-still` & `.sc-hover`)
 - Other improvements for better management of Less files
 
 ### v0.5.2
