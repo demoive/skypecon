@@ -42,7 +42,7 @@ There are many sites around the web that also catalog the emoticons and flags th
 
 The Skype team really hits a sweet spot in the set of icons they offer, achieving all of the following:
 
-1. accurate expression/emotion captured
+1. accurate expression/emotion captured ([avoids miscommojication](http://grouplens.org/blog/investigating-the-potential-for-miscommunication-using-emoji/)) 
 2. sufficient variety
 3. appropriate animations
 4. correct level of "cuteness"
@@ -51,9 +51,14 @@ I think other emoticons available today fail in at least one of these criteria. 
 
 - **tongue**: :stuck_out_tongue_closed_eyes: :stuck_out_tongue: :stuck_out_tongue_winking_eye:
 - **kiss**: :kissing: :kissing_smiling_eyes: :kissing_closed_eyes: :kissing_heart:
-- **smile**: :smile: :smiley: :grinning: :laughing: :satisfied: :relieved: :grimacing: :grin:
-- **worried**: :worried: :anguished: :frowning: :dizzy_face:
-- **cry**: :cry: :sweat: :tired_face: :weary: :cold_sweat: :disappointed_relieved: :sleepy: :pensive: :disappointed:
+- **smile**: :smile: :smiley: :grinning: :relieved: :grimacing: :grin:
+- **laughing**: :laughing: :satisfied:
+- **worried**: :worried: :persevere:
+- **surprised**: :anguished: :frowning: :dizzy_face: :open_mouth: :hushed:
+- **indifferent**: :neutral_face: :expressionless: :confused:
+- **cry**: :sob: :cry: :sweat: :tired_face: :confounded: :weary: :cold_sweat: :disappointed_relieved: :sleepy:
+- **sad**: :pensive: :disappointed:
+
 
 <!--
 The [Phantom Open Emoji](https://github.com/Genshin/PhantomOpenEmoji) is promising. This library offers a great framework for using their work on the web.
